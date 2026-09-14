@@ -1,5 +1,9 @@
 # Mintlify Starter Kit
 
+1. Write MDX syntax in Obsidian (and it is recommended to have open source mode turned on).
+2. Press `ctrl/cmd + p` to open the Command Palette.
+3. Type `mdx: preview` in the Command Palette and press `Enter`.
+
 Use the starter kit to get your docs deployed and ready to customize.
 
 Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
