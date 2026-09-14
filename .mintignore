@@ -2,6 +2,11 @@
 # .git, .github, .claude, .agents, .idea, node_modules,
 # README.md, LICENSE.md, CHANGELOG.md, CONTRIBUTING.md
 
+# Obsidian vault leftovers
+.obsidian/
+.trash/
+Templates/
+
 # Draft content
 drafts/
 *.draft.mdx

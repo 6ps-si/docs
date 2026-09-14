@@ -1,0 +1,47 @@
+---
+title: "Uploading models"
+description: "Supported file formats, what happens to your file, and converting FBX first."
+---
+
+<Note>
+  Outline only. Verify every statement against the source files listed at the bottom of
+  this page before publishing. Do not state a capability, limit, or price that those
+  files do not confirm.
+</Note>
+
+{/* SCREENSHOT NEEDED: Upload panel with the format list, and the FBX conversion prompt
+    Save to images/<section>/ then replace this comment with:
+    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+
+## Supported formats
+
+Mesh formats: glTF, GLB, OBJ, STL, DAE, 3DS. Gaussian splat formats: .sog, .splat, .spz,
+.ply.
+
+## Uploading
+
+The upload flow and where the file goes in your library.
+
+## Automatic optimization
+
+Uploads are optimized so they load on lower-powered devices. Keep this generic.
+
+## Converting an FBX file
+
+FBX is not uploaded directly. The editor offers to convert it, and there is a standalone
+converter at studio.6ps.si/tools/fbx-converter.
+
+## Using the standalone converter
+
+Free, no account, and the file stays in your browser. This tool is also useful on its own,
+outside the editor.
+
+---
+
+{/*
+Sources of truth for this page:
+  - ../Studio/components/Editor/ModelUploader.tsx
+  - ../Studio/components/Editor/FbxConvertModal.tsx
+  - ../Studio/app/tools/fbx-converter/page.tsx
+  - ../Studio/lib/fbxConverter/convertFbxToGlb.ts
+*/}

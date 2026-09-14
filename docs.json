@@ -1,53 +1,119 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "6PS Studio",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#4C78A1",
+    "light": "#7EAAD3",
+    "dark": "#1C244B"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "groups": [
       {
-        "group": "Getting Started",
+        "group": "Get started",
         "pages": [
           "index",
-          "quickstart"
+          "quickstart",
+          "docs/get-started/accounts"
         ]
+      },
+      {
+        "group": "Your library",
+        "pages": [
+          "docs/library/overview",
+          "docs/library/visibility-and-ownership"
+        ]
+      },
+      {
+        "group": "3D Editor",
+        "pages": [
+          "docs/editor/overview",
+          "docs/editor/uploading-models",
+          "docs/editor/model-settings",
+          "docs/editor/camera-positions",
+          "docs/editor/hotspots",
+          "docs/editor/scene-and-environment",
+          "docs/editor/ai-render",
+          "docs/editor/publishing"
+        ]
+      },
+      {
+        "group": "Virtual Walkthrough",
+        "pages": [
+          "docs/walkthrough/overview",
+          "docs/walkthrough/capturing-photos",
+          "docs/walkthrough/building-a-tour",
+          "docs/walkthrough/room-settings",
+          "docs/walkthrough/ai-room-editing",
+          "docs/walkthrough/publishing"
+        ]
+      },
+      {
+        "group": "Sharing and embedding",
+        "pages": [
+          "docs/sharing/links-and-embedding",
+          "docs/sharing/engagement-and-analytics"
+        ]
+      },
+      {
+        "group": "Teams",
+        "pages": [
+          "docs/teams/organizations",
+          "docs/teams/members-and-roles",
+          "docs/teams/seats-and-quota"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "docs/reference/supported-formats"
+        ]
+      },
+      {
+        "group": "Tutorials",
+        "pages": []
+      },
+      {
+        "group": "Blog",
+        "pages": []
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "6PS Studio",
+          "href": "https://studio.6ps.si",
+          "icon": "cube"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "6ps.si",
+          "href": "https://6ps.si",
+          "icon": "globe"
+        },
+        {
+          "anchor": "Discord",
+          "href": "https://discord.gg/NguZsWu2jh",
+          "icon": "discord"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/Drone.svg",
+    "dark": "/logo/Drone.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:info@6ps.si"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Open Studio",
+      "href": "https://studio.6ps.si"
     }
   },
   "contextual": {
@@ -64,9 +130,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://www.linkedin.com/company/6ps",
+      "instagram": "https://www.instagram.com/6_ps",
+      "discord": "https://discord.gg/NguZsWu2jh"
     }
   }
 }

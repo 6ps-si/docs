@@ -1,0 +1,48 @@
+---
+title: "Seats and shared quota"
+description: "How team capacity works and why adding a member can be blocked."
+---
+
+<Note>
+  Outline only. Verify every statement against the source files listed at the bottom of
+  this page before publishing. Do not state a capability, limit, or price that those
+  files do not confirm.
+</Note>
+
+{/* SCREENSHOT NEEDED: Team usage figures showing storage and token balances
+    Save to images/<section>/ then replace this comment with:
+    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+
+## What a seat is
+
+One seat per member. Explain the concept plainly. Do not mention prices.
+
+## Adding a member past your seat count
+
+What the app does when you try, and how to proceed.
+
+## Shared storage
+
+Storage is pooled across the team rather than held per person.
+
+## Shared AI tokens
+
+AI tokens are drawn from the same shared pool, so one member's renders reduce what is left
+for everyone.
+
+## Checking what is left
+
+The stats bar in the library, and the usage figures in team settings.
+
+## Owner and admin
+
+Which of the two can change seat counts.
+
+---
+
+{/*
+Sources of truth for this page:
+  - ../Studio/components/Settings/business.md
+  - ../Studio/hooks/useStorageRemaining.ts
+  - ../Studio/hooks/useAiTokens.ts
+*/}

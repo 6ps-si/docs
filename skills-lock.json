@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "skills": {
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "computedHash": "9cdbb4b8f7a3aeaef82e6230c9e823500d4a8a1214c726cf342cf9829d34fc7d"
+    },
+    "grill-with-docs": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
+      "computedHash": "35e62aa423aaeab6a414bcac273f56dfb17802ef2334b41b6a3b00f28196c8cf"
+    },
+    "grilling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grilling/SKILL.md",
+      "computedHash": "4dd886b0196bf43729d954ae326016f2bd9f5f79d892500b407c33a753362f14"
+    },
+    "handoff": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/handoff/SKILL.md",
+      "computedHash": "20e5f4afdef502637510bc5c64d27645d3c85c88df9cb006824bbb0980166319"
+    },
+    "mintlify": {
+      "source": "mintlify.com",
+      "sourceUrl": "https://mintlify.com/docs",
+      "sourceType": "well-known",
+      "computedHash": "fd66ce16114ebf655f72111e1724bccca11465e055cdfe40de9ab1cb1022c97d",
+      "wellKnownDigest": "sha256:51af84f1929d3260e762912d1ea7e1552f92cadaa49403510ff653d1e90e804a"
+    },
+    "mintlify-api": {
+      "source": "mintlify.com",
+      "sourceUrl": "https://mintlify.com/docs",
+      "sourceType": "well-known",
+      "computedHash": "4b73380bdf72f728299bbd1d40b2119d44651bde75b4a23317da290936bc3301",
+      "wellKnownDigest": "sha256:dacffa9de4971a0156927fa472e6ed552e3eb013a0b728fb0340c491815168e2"
+    },
+    "mintlify-docs": {
+      "source": "mintlify.com",
+      "sourceUrl": "https://mintlify.com/docs",
+      "sourceType": "well-known",
+      "computedHash": "2ac12755defaeb583afdc27b678f1a9eef7da655d2491e0991c0dd4b56d8fb3d",
+      "wellKnownDigest": "sha256:f2f4d54e3fd6f7fabf0833074158ff708ae31576d0d84ab7738a88acec672909"
+    }
+  }
+}

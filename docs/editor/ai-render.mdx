@@ -1,0 +1,55 @@
+---
+title: "AI render"
+description: "Turn the current 3D view into a rendered image."
+---
+
+<Note>
+  Outline only. Verify every statement against the source files listed at the bottom of
+  this page before publishing. Do not state a capability, limit, or price that those
+  files do not confirm.
+</Note>
+
+{/* SCREENSHOT NEEDED: AI camera panel with a prompt filled in and the token cost visible
+    Save to images/<section>/ then replace this comment with:
+    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+
+## What it does
+
+Captures the view you are looking at and renders an image from it. Position it as cutting
+rendering time from about an hour to roughly ten seconds. Do not describe the result as a
+finished deliverable.
+
+## Render or upscale
+
+The two modes and when to use each.
+
+## Describing what you want
+
+Writing the prompt, and choosing an aspect ratio.
+
+## Reference images
+
+Uploading a reference, and reusing your last render as the reference for the next one.
+
+## Exact colors
+
+Picking up to four colors the render should use.
+
+## What it costs
+
+Each render uses AI tokens. The panel shows the cost and your remaining balance before you
+run it.
+
+## On the free plan
+
+Results carry a watermark. Watermarking is applied when the image is fetched, so it
+disappears from existing results as soon as you move to a paid plan.
+
+---
+
+{/*
+Sources of truth for this page:
+  - ../Studio/components/Editor/AiCameraPanel.tsx
+  - ../Studio/lib/colorSwatch.ts
+  - ../Studio/hooks/useAiTokens.ts
+*/}
