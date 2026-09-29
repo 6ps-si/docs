@@ -3,39 +3,68 @@ title: "Visibility and ownership"
 description: "Control who can open a project and whether it belongs to you or your team."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+Every model and walkthrough has two settings that decide who can reach it. Visibility controls who can open it. Ownership controls whether it sits in your personal library or your team's.
 
-{/* SCREENSHOT NEEDED: Visibility selector with the domain-locked option expanded
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+{/* SCREENSHOT NEEDED: Visibility selector with the Unlisted option selected and the Allowed domains field open
+    Save to images/library/ then replace this comment with:
+    <Frame><img src="/images/library/visibility-selector.png" alt="The Visibility selector with Public, Unlisted, and Private options and the Allowed domains field" /></Frame> */}
 
 ## Visibility options
 
-Four modes: public, unlisted, domain locked, and private. One short paragraph each on who
-can reach the project.
+You choose visibility in the **Visibility** selector. It appears in the **Scene info** panel of the 3D Editor and when you publish a walkthrough. Hover over an option to see a short description.
+
+| Option | Who can open it |
+| --- | --- |
+| **Public** | Everyone. The project is listed in the Public section of the library. |
+| **Unlisted** | Anyone who has the link. The project stays out of the Public section. |
+| **Domain** | Visitors who reach it from the websites you approve. Set it up under Unlisted, as described below. |
+| **Private** | Only you and your organization. |
+
+Choose **Public** to show off your work in the community feed. Choose **Unlisted** to share by link with clients or colleagues. Choose **Private** for anything that should stay inside your organization.
+
+<Info>
+  The owner of a project, and team admins and editors, can change its visibility.
+</Info>
 
 ## Domain locking
 
-How the allowed-domain list works and when to use it for embeds.
+Domain locking limits where your project can be embedded. Use it when you embed a model or walkthrough on your own website and want it to load there and nowhere else.
+
+<Steps>
+  <Step title="Choose Unlisted">
+    Select **Unlisted**. The **Allowed domains** field opens below the options.
+  </Step>
+  <Step title="Enter your domains">
+    Type the sites that may embed the project, separated by commas. For example: `mysite.com, www.mysite.com`. Enter plain hostnames without a protocol or a path.
+  </Step>
+  <Step title="Save or publish">
+    Save your changes. As soon as the list has at least one domain, the project is domain locked. Clear the list to return to a plain unlisted project.
+  </Step>
+</Steps>
+
+List every hostname you embed on. `mysite.com` and `www.mysite.com` are separate entries. Studio's own pages always load your project, and you and your team members can always open it.
+
+<Warning>
+  A domain lock restricts embedding in the browser. It keeps your project from loading on other websites, and it does not protect content that must stay confidential. Use **Private** for that.
+</Warning>
 
 ## Private projects
 
-Access uses short-lived signed keys that rotate. Describe the effect for the user, not the
-mechanism.
+A private project opens only for you and the members of your organization. Anyone else who has the link cannot open it. Studio controls access with short-lived signed keys that rotate regularly, so an old link or a copied address stops working on its own.
+
+Private mode suits work for clients in privacy-sensitive industries. Team members see private projects in **My Team**, and everyone else sees nothing.
 
 ## Personal and team ownership
 
-Moving a project between your own library and your team's, and what changes when you do.
-Verify that ownership transfer does not affect billing.
+If you belong to a team, projects you create can live in your own library or in your team's. In the **Scene info** panel of the 3D Editor and in the walkthrough publish dialog, the **Save as:** selector shows two buttons: **Personal** and your team's name.
 
----
+- **Personal** keeps the project in **My Scenes**.
+- Your team's name moves it to **My Team**, where every member of the team can see it.
 
-{/*
-Sources of truth for this page:
-  - ../Studio/components/Editor/VisibilitySelector.tsx
-  - ../Studio/app/locales/en.ts
-*/}
+You can switch a project between the two whenever you like. In the 3D Editor the change is applied when you click **Save**, the same as a visibility change.
+
+Ownership does not change where storage comes from. While you are a member of a team, storage always comes from your organization's plan. The setting controls who can see and manage the project. It has no effect on billing.
+
+<Note>
+  Team roles decide who can edit or delete team content. See [Members and roles](/docs/teams/members-and-roles).
+</Note>

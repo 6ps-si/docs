@@ -3,53 +3,69 @@ title: "AI render"
 description: "Turn the current 3D view into a rendered image."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+**AI Render** captures the view you are looking at in the 3D Editor and turns it into a rendered image based on your description. It is built to cut the wait for a visual from about an hour of conventional rendering to roughly ten seconds, so you can try ideas quickly and share them.
 
-{/* SCREENSHOT NEEDED: AI camera panel with a prompt filled in and the token cost visible
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+Treat the result as a fast way to explore and communicate a design. It does not replace a final render.
 
-## What it does
+{/* SCREENSHOT NEEDED: AI Render panel with an aspect ratio chosen, a prompt filled in, and the token cost visible
+    Save to images/editor/ then replace this comment with:
+    <Frame><img src="/images/editor/ai-render.png" alt="The AI Render panel showing token balance, mode buttons, aspect ratio options, a prompt, and the Capture and Render button" /></Frame> */}
 
-Captures the view you are looking at and renders an image from it. Position it as cutting
-rendering time from about an hour to roughly ten seconds. Do not describe the result as a
-finished deliverable.
+## Before you start
 
-## Render or upscale
+- Load a model and frame the view you want to render. AI Render uses the view exactly as it appears on screen.
+- Each render uses AI tokens. The panel shows the cost per use and your remaining balance before you run anything.
 
-The two modes and when to use each.
+## Render an image
 
-## Describing what you want
+Open **AI Render** in the right sidebar, or the **AI** tab on a phone.
 
-Writing the prompt, and choosing an aspect ratio.
+<Steps>
+  <Step title="Choose an aspect ratio">
+    Pick **16:9**, **4:3**, **1:1**, **3:4**, or **9:16**. A frame appears in the viewer to show what will be captured. Nothing is selected by default, and you need to choose one to continue.
+  </Step>
+  <Step title="Describe what you want">
+    Write your request in the **Prompt** box, which starts with **Describe the edit…**. Say what should change in the captured view, such as materials, lighting, or furnishing.
+  </Step>
+  <Step title="Add references (optional)">
+    Add a reference image and up to four colors, as described below.
+  </Step>
+  <Step title="Render">
+    Click **Capture & Render**. The button stays disabled until you have both a prompt and an aspect ratio.
+  </Step>
+</Steps>
+
+The result opens over the viewer. Use **Download** to save it, or close it to return to the editor. Click **New render** to start again.
 
 ## Reference images
 
-Uploading a reference, and reusing your last render as the reference for the next one.
+A reference image guides the AI with a second picture. Under **Reference image** you have two options:
+
+- **Upload image** lets you pick a JPEG, PNG, or WebP file.
+- **Use last render** appears after your first render and reuses the last render from this session. This helps you refine a result step by step.
+
+Click the small **x** on the preview to remove the reference.
 
 ## Exact colors
 
-Picking up to four colors the render should use.
+**Color references** let you name the exact colors the render should use, which is more reliable than describing a color in words.
+
+1. Click the **+** button. You can add up to four colors.
+2. In the text box, say what the color is for, for example "walls".
+3. Click the color swatch and choose the color.
+
+Use the **x** next to a color to remove it.
+
+## Upscale a render
+
+After your first render, the **Upscale** mode becomes available in the **Mode** selector. Before then it shows **Run a render first**.
+
+Upscale enlarges and sharpens your most recent render. It needs no prompt. Select **Upscale**, then click **Upscale Render**. Click **New upscale** afterwards to run it again.
 
 ## What it costs
 
-Each render uses AI tokens. The panel shows the cost and your remaining balance before you
-run it.
+The panel shows **AI tokens**, the cost of a render or upscale as **per usage**, and how many tokens you have **left**. Your balance also appears on the stats bar in your [library](/docs/library/overview#your-usage-at-a-glance).
 
-## On the free plan
-
-Results carry a watermark. Watermarking is applied when the image is fetched, so it
-disappears from existing results as soon as you move to a paid plan.
-
----
-
-{/*
-Sources of truth for this page:
-  - ../Studio/components/Editor/AiCameraPanel.tsx
-  - ../Studio/lib/colorSwatch.ts
-  - ../Studio/hooks/useAiTokens.ts
-*/}
+<Note>
+  AI output is watermarked on the free plan. The watermark is applied when the image is shown, so it disappears from your existing results as soon as you move to a plan without one.
+</Note>

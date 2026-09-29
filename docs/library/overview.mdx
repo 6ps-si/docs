@@ -3,43 +3,71 @@ title: "Your library"
 description: "Browse your projects, your team's content, and community examples, and start something new."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+The library is your home base in 6PS Studio. Every 3D model and virtual walkthrough you create lives here, next to your team's projects and a feed of public examples from the community.
 
 {/* SCREENSHOT NEEDED: Library page with stats bar and all sections expanded
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+    Save to images/library/ then replace this comment with:
+    <Frame><img src="/images/library/overview.png" alt="The library page showing the stats bar and the My Scenes, My Team, and Public sections" /></Frame> */}
 
 ## The dashboard
 
-What the page shows: the stats bar, then My content, My Team, and the community section.
+The page is built from a stats bar at the top, followed by three sections:
+
+| Section | What it holds |
+| --- | --- |
+| **My Scenes** | The 3D models and walkthroughs you created yourself. |
+| **My Team** | Everything that belongs to your organization, whoever uploaded it. |
+| **Public** | Example models and walkthroughs shared by the community. |
+
+You can browse the Public section without signing in. Sign in to see your own scenes and your team's content.
 
 ## Your usage at a glance
 
-The stats bar covers storage used, AI tokens remaining, and total views.
+When you are signed in, the stats bar at the top of the page shows:
+
+- **Scenes**: the total number of models and walkthroughs across My Scenes and My Team.
+- **Views**: total views across your content. Hover over this figure to see the split between **Models** and **Walkthroughs**.
+- **Storage**: the space you have used out of the space your plan allows, in GB.
+- **AI tokens**: the AI tokens you have left.
+
+The Views, Storage, and AI tokens tiles appear once Studio has loaded those figures for your account.
 
 ## Sections and filters
 
-Collapsible sections, filtering by content type, and sorting by name, popularity, or date.
+Click a section's title to collapse or expand it. Studio decides which sections open by default. The Public section starts open when you have a small personal library and no team. If your library is large, it starts collapsed so your own content stays in front.
+
+Each expanded section gives you three ways to find things:
+
+<Steps>
+  <Step title="Search">
+    Type in the **Search** box to match project names.
+  </Step>
+  <Step title="Filter by type">
+    Choose **All**, **Models**, or **Walkthroughs** to narrow the grid to one kind of content.
+  </Step>
+  <Step title="Sort">
+    Open **Sort by** and pick **Alphabet (A-Z)**, **Alphabet (Z-A)**, **Popularity**, or **Date**. Without a choice, the newest projects come first.
+  </Step>
+</Steps>
+
+In My Team, the **Shared** dropdown lists the members who uploaded models. Pick a name to see only that member's models, or choose **All** to clear the filter.
 
 ## Starting a new project
 
-The Create button opens a chooser for a 3D model or a walkthrough. Mention the empty-state
-cards that appear before you have any projects.
+The last card in My Scenes is a dashed card with a plus icon. Click it to open the **Choose Project Type** dialog, then pick the project you want to build:
+
+- **3D Editor** for 3D models. See [3D Editor overview](/docs/editor/overview).
+- **Virtual Walkthrough** for 360° tours. See [Virtual Walkthrough overview](/docs/walkthrough/overview).
+- **AI Virtual Staging** for furnishing, renovating, editing, or upscaling a single image. See [AI Virtual Staging](/docs/ai-staging/overview).
+
+Click **Continue** on your choice to open the matching tool.
+
+Before you have any projects, My Scenes shows these same choices as cards in place of the grid, so you can start straight away.
 
 ## Locked sections
 
-Some sections are unavailable on your current plan and link through to plan settings. State
-the behavior, not the tiers.
+Some sections depend on your plan. My Team is locked when you are signed out, or when you are not yet in an organization and your plan does not include one. A locked section stays collapsed, shows a lock, and offers an **Upgrade plan** button. When you are signed in, the button opens the plan tab in your settings. If you are already a member of an organization, My Team is available to you.
 
----
-
-{/*
-Sources of truth for this page:
-  - ../Studio/app/library/page.tsx
-  - ../Studio/components/Library/Section.tsx
-  - ../Studio/components/Library/StatsBar.tsx
-*/}
+<Note>
+  Team content, roles, and shared quota are covered in [Organizations](/docs/teams/organizations).
+</Note>

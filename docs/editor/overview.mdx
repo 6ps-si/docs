@@ -3,42 +3,49 @@ title: "3D Editor"
 description: "Set up a 3D model in the browser: camera, materials, hotspots, and environment."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+The 3D Editor runs in your browser. You load a model, decide how it looks and behaves for viewers, and publish it as a link or an embed. No code is involved.
 
-{/* SCREENSHOT NEEDED: 3D Editor with a model loaded, sidebar and right panel open
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+The editor handles standard mesh models and 3D Gaussian Splatting files. That covers large building scenes as well as single-object scans for product pages. See [Supported formats](/docs/reference/supported-formats) for the full list.
 
-## What the editor does
+Viewers explore a published model live in their browser. The aim is to shorten the wait for something you can show a client from about an hour of rendering to roughly ten seconds.
 
-Configure how a model looks and behaves for viewers, then publish it. Keep to workflow time
-claims rather than final-render claims.
+{/* SCREENSHOT NEEDED: 3D Editor with a model loaded, left sidebar and right panel open
+    Save to images/editor/ then replace this comment with:
+    <Frame><img src="/images/editor/overview.png" alt="The 3D Editor with the Objects panel on the left, the model in the viewer, and Scene info on the right" /></Frame> */}
 
 ## The layout
 
-Left sidebar for the object tree and panel switching, the viewer in the middle, contextual
-settings on the right.
+On a desktop the editor has three areas.
+
+<Columns cols={3}>
+  <Card title="Left sidebar" icon="sidebar">
+    A back arrow to your library, then the **Objects**, **Positions**, and **Buttons** panels, and an **Advanced** panel for visual effects.
+  </Card>
+  <Card title="Viewer" icon="cube">
+    Your model in the middle. Before you add a model, this area is a drop zone that says **Drag and drop your 3D asset here**.
+  </Card>
+  <Card title="Right sidebar" icon="sliders">
+    **Scene info** at the top, followed by settings for the selected position, button, scene, and model, and the **AI Render** panel.
+  </Card>
+</Columns>
+
+- **Objects** lists the models in your scene. Select one to edit its settings. See [Uploading models](/docs/editor/uploading-models) and [Model settings](/docs/editor/model-settings).
+- **Positions** holds the saved camera views. See [Camera positions](/docs/editor/camera-positions).
+- **Buttons** places clickable points in the scene. See [Hotspots](/docs/editor/hotspots).
+- **Scene Settings** covers the background, lighting, and other scene-wide options. See [Scene and environment](/docs/editor/scene-and-environment).
+- **AI Render** creates an AI-edited image from the current view. See [AI render](/docs/editor/ai-render).
+- **Scene info** holds the name, description, visibility, and the **Publish** button. See [Publishing](/docs/editor/publishing) and [Visibility and ownership](/docs/library/visibility-and-ownership).
+
+Below the editor, the **Statistics** shortcut in the right sidebar scrolls to a section with the view and engagement figures for the model. See [Engagement and analytics](/docs/sharing/engagement-and-analytics).
 
 ## On a phone
 
-The same panels appear in a bottom sheet. The editor is designed to work fully on mobile.
+The editor works fully on a phone. The panels move into a bottom sheet with six tabs: **Info**, **Objects**, **Positions**, **Buttons**, **Settings**, and **AI**. Tap a tab to open the sheet, and tap the handle at the top of the sheet or the viewer to close it. The controls inside each tab are the same as on desktop.
 
 ## Trying it without an account
 
-The editor is browsable signed out. Signing in is required to publish.
+You can open the editor and try its features without signing in. You need an account to publish. When you click **Publish** while signed out, a sign-in window opens, and you can carry on once you are signed in. See [Accounts](/docs/get-started/accounts).
 
 ## Help tips
 
-The small question-mark icons next to settings explain each control in place.
-
----
-
-{/*
-Sources of truth for this page:
-  - ../Studio/app/editor/page.tsx
-  - ../Studio/components/Editor/CLAUDE.md
-*/}
+Many settings have a small question-mark icon next to their label. Hover over it to read what the control does.

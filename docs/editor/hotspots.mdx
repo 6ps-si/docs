@@ -3,43 +3,73 @@ title: "Hotspots and buttons"
 description: "Add clickable points that show text, images, or links inside a scene."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+Buttons add interactive points to your model. A visitor clicks one to read a note, or to open a linked page. You manage them in the **Buttons** panel on the left and edit them in **Button Settings** on the right.
 
-{/* SCREENSHOT NEEDED: A scene with several hotspots placed, one open and showing its content
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+{/* SCREENSHOT NEEDED: A scene with several buttons placed and the Button Settings panel open on one of them
+    Save to images/editor/ then replace this comment with:
+    <Frame><img src="/images/editor/hotspots.png" alt="A 3D scene with several icon buttons and the Button Settings panel showing name, type, icon, and description" /></Frame> */}
 
 ## Two kinds of buttons
 
-Buttons placed in the 3D scene, which sit at a point on the model, and buttons fixed to the
-screen, which stay put as the camera moves. Explain when each is right.
+The **Buttons** panel lists both kinds, each with its icon and name.
 
-## Placing a button
+| Kind | How it behaves | Position |
+| --- | --- | --- |
+| On-screen button | Stays in the same place on the screen while the camera moves. | An X and Y offset from the center of the view. |
+| 3D button | Sits on a point of the model and moves with it as the camera moves. | X, Y, and Z coordinates in the scene. |
 
-Drag to place it, then adjust its position.
+Use an on-screen button for something that should always be visible, such as a note about the whole scene or a link to your website. Use a 3D button to label a specific part of the model.
+
+## Adding an on-screen button
+
+<Steps>
+  <Step title="Add the button">
+    Click the **+** button in the **Buttons** panel. A new button named **Canvas button** followed by a number appears in the list and in the viewer, and its settings open on the right.
+  </Step>
+  <Step title="Place it">
+    Drag the button to where you want it in the viewer. You can also type its **X** and **Y** values under **Button Location**. Both values run from -50 to 50, measured from the center of the view.
+  </Step>
+  <Step title="Set what it does">
+    Choose a **Button Type** and fill in its content, as described below.
+  </Step>
+</Steps>
+
+3D buttons appear in the same list when a scene already contains them. Select one to edit it. Its **Button Location** has **X**, **Y**, and **Z** fields for the position in the scene.
+
+## Button types
+
+The **Button Type** setting decides what happens when a visitor clicks the button.
+
+| Type | What the visitor sees |
+| --- | --- |
+| **Icon with Text** | A popup with the content you write in **Button Description**. |
+| **Frame** | The page at your **Link** URL, opened in a frame on top of the scene. |
+
+For a **Frame** button, turn on **Fullscreen** to open the linked content over the whole screen in place of a popup frame.
 
 ## Writing the content
 
-The rich text editor: formatting, color, links, alignment.
+For an **Icon with Text** button, write in the **Button Description** editor. Use the expand icon on the editor to work in a larger window. The toolbar offers:
+
+- Bold, italic, and underline
+- Heading 2 and Heading 3
+- Bullet and numbered lists
+- Left, center, and right alignment
+- Links
+- A horizontal rule
+- Text color, from a set of preset colors
+
+<Note>
+  The **Button Name** field is an internal label. It appears in the editor's button list and is not shown to visitors.
+</Note>
 
 ## Appearance
 
-Icon, size, and color options. Verify the exact set in the settings panels.
+- **Button Icon** shows a grid of icons. Click one to use it. You can also click the icon next to a button in the list to change it.
+- **Size** sets how large an on-screen button appears. A 3D button has three size fields: **Min**, **Size**, and **Max**.
 
 ## Editing and removing
 
-Selecting an existing button and deleting it.
-
----
-
-{/*
-Sources of truth for this page:
-  - ../Studio/components/Editor/ButtonsPanel.tsx
-  - ../Studio/components/Editor/ButtonsCanvasPanel.tsx
-  - ../Studio/components/Editor/RichTextEditor.tsx
-  - ../Studio/hooks/useButtonDrag.ts
-*/}
+- Click a button in the list, or click it in the viewer, to select it and open **Button Settings**.
+- Click outside the panel to deselect it.
+- Hover over a button in the list, open its menu, and choose **Delete** to remove it.

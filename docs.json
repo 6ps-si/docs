@@ -50,6 +50,12 @@
         ]
       },
       {
+        "group": "AI Virtual Staging",
+        "pages": [
+          "docs/ai-staging/overview"
+        ]
+      },
+      {
         "group": "Sharing and embedding",
         "pages": [
           "docs/sharing/links-and-embedding",

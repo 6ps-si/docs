@@ -3,45 +3,62 @@ title: "Camera positions"
 description: "Save named views so visitors can move through a model in a set order."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+A camera position is a saved view of your model: where the camera looks, how far away it is, and how far a visitor can turn it. You build a list of positions in the **Positions** panel and fine-tune each one in **Position Settings**.
 
-{/* SCREENSHOT NEEDED: Positions panel beside a position's settings, showing the constraint sliders
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+{/* SCREENSHOT NEEDED: Positions panel beside Position Settings, showing the Rotation X, Rotation Y, and Zoom sliders
+    Save to images/editor/ then replace this comment with:
+    <Frame><img src="/images/editor/camera-positions.png" alt="The Positions panel listing three positions next to the Position Settings panel with rotation and zoom sliders" /></Frame> */}
 
 ## Saving a view
 
-Frame the model, then capture the current view as a position.
+<Steps>
+  <Step title="Frame the model">
+    Orbit, pan, and zoom in the viewer until the model looks the way you want.
+  </Step>
+  <Step title="Add a position">
+    Click the **+** button in the **Positions** panel. Studio saves the current view as a new position named **New Position** followed by a number, and opens its settings on the right.
+  </Step>
+  <Step title="Refine it">
+    Rename it, add a description, and adjust the limits as described below.
+  </Step>
+</Steps>
+
+Click a position in the list to move the camera to it and open its settings. To change a saved view later, frame the model again, select the position, and click **Capture** in **Position Settings**. Capture replaces the position's angle, zoom, and target with the current view and leaves its limits as they are.
 
 ## Naming and describing
 
-Name and description, and where viewers see them.
+In **Position Settings**, the **Name** field sets the label shown in the position list. The **Description** field is a rich-text editor. Its content appears to viewers when the position is active, so use it to explain what they are looking at.
 
 ## Movement between positions
 
-Animation duration and what it controls.
+**Animation Duration** sets how many seconds the camera takes to travel to this position. The default is 2 seconds and the shortest value is 0.1 seconds. Type a number, use the arrows, or scroll the mouse wheel over the field.
 
-## Framing
+## Framing and limits
 
-Field of view, and the zoom and rotation limits on the X and Y axes.
+Three sliders control how the view looks and how much freedom a visitor has. Each one has a handle for the current value and handles for the minimum and maximum.
 
-## Look-at targets
+| Slider | What it controls |
+| --- | --- |
+| **Rotation X** | The left and right camera angle, and how far a visitor can turn it. |
+| **Rotation Y** | The up and down camera angle, and how far a visitor can turn it. |
+| **Zoom** | The default zoom, plus the closest and farthest zoom a visitor can reach. |
 
-Picking a point for the camera to face.
+Drag a limit handle to set a boundary. On the two rotation sliders, dragging a limit handle all the way to the edge switches that limit off, so a visitor can turn freely in that direction.
+
+Tight limits keep visitors on the views you designed. Wide limits let them explore.
+
+<Tip>
+  The overall lens angle of the camera is a scene-wide setting. See [Scene and environment](/docs/editor/scene-and-environment).
+</Tip>
+
+## Target
+
+**Target** is the point in the scene the camera orbits around, entered as X, Y, and Z values. Frame the view and click **Capture** to fill these in for you, or type values to fine-tune them.
 
 ## Ordering
 
-Reordering positions changes the sequence visitors follow.
+The first position in the list is the primary position, the view your model opens with.
 
----
-
-{/*
-Sources of truth for this page:
-  - ../Studio/components/Editor/PositionsPanel.tsx
-  - ../Studio/components/Editor/PositionSettingsPanel.tsx
-  - ../Studio/components/Editor/ConstraintSlider.tsx
-*/}
+- Drag the grip handle at the left of a position to change its order.
+- Open the menu next to a position and choose **Primary Position** to move it to the top of the list.
+- Open the menu and choose **Delete** to remove a position. The last remaining position cannot be deleted.

@@ -1,44 +1,62 @@
 ---
 title: "Quickstart"
-description: "Publish your first 3D model or walkthrough and share it, in about five minutes."
+description: "Publish your first 3D model or walkthrough and share it with a link."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+This guide takes you from an empty library to a published project with a link you can share. Pick the path that matches what you have.
 
-{/* SCREENSHOT NEEDED: The Create project modal with both options visible
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+{/* SCREENSHOT NEEDED: The Choose Project Type dialog with the 3D Editor and Virtual Walkthrough options visible
+    Save to images/ then replace this comment with:
+    <Frame><img src="/images/quickstart-create.png" alt="The Choose Project Type dialog with the 3D Editor, Virtual Walkthrough, and AI Virtual Staging options" /></Frame> */}
 
 ## Before you start
 
-Prerequisites: a 6PS account, and either a 3D model file or a set of 360 room photos.
+You need:
+
+- A 6PS Studio account. You can try the editors without one, but you need to sign in to publish. See [Accounts and sign-in](/docs/get-started/accounts).
+- Either a 3D model file, or a set of 360° room photos.
 
 ## Create a project
 
-Use Create in the top bar, then choose a 3D model or a walkthrough. Note that the Create
-modal is the entry point for both.
+Click **Create** in the top bar. The **Choose Project Type** dialog opens:
+
+- **3D Editor** for a 3D model.
+- **Virtual Walkthrough** for a tour built from room photos.
+- **AI Virtual Staging** for editing a single image with AI.
+
+Choose one and click **Continue**. You can also start from the plus card in **My Scenes** in your [library](/docs/library/overview).
 
 ## Set it up
 
-Short version of each path, with links to the full tool sections rather than repeating the
-detail.
+<Tabs>
+  <Tab title="3D model">
+    1. Drag your model file onto the editor, or click to browse. See [Uploading models](/docs/editor/uploading-models) for the formats you can use.
+    2. Frame the model in the viewer, then click **+** in **Positions** to save that view. See [Camera positions](/docs/editor/camera-positions).
+    3. Adjust the model, background, and lighting if you like. See [Model settings](/docs/editor/model-settings) and [Scene and environment](/docs/editor/scene-and-environment).
+  </Tab>
+  <Tab title="Walkthrough">
+    1. Drag a 360° photo onto the editor, and choose **360° Image** when asked what type of image it is. See [Capturing photos](/docs/walkthrough/capturing-photos).
+    2. Use **Add room** in the **Scenes** list to add the rest of your rooms.
+    3. Connect the rooms with **Room Transition** buttons. See [Building a tour](/docs/walkthrough/building-a-tour).
+  </Tab>
+</Tabs>
 
 ## Publish
 
-Name, description, visibility, then publish.
+<Steps>
+  <Step title="Name it">
+    In **Scene info**, enter a **Name** and, if you like, a **Description**. Publishing needs a name.
+  </Step>
+  <Step title="Choose who can see it">
+    Pick **Public**, **Unlisted**, or **Private** in the **Visibility** selector. See [Visibility and ownership](/docs/library/visibility-and-ownership).
+  </Step>
+  <Step title="Publish">
+    Click **Publish** and confirm. Studio prepares and uploads your project while a progress bar runs. See [Publishing a model](/docs/editor/publishing) or [Publishing a walkthrough](/docs/walkthrough/publishing).
+  </Step>
+</Steps>
 
 ## Share it
 
-Copy the link or the embed snippet. Link to the sharing section.
+When publishing finishes, the share dialog shows a **Share Link** and a QR code. Copy the link to send it, or embed the project in your own website. See [Share links and embedding](/docs/sharing/links-and-embedding).
 
----
-
-{/*
-Sources of truth for this page:
-  - ../Studio/app/library/page.tsx
-  - ../Studio/components/Library/NewProjectModal.tsx
-*/}
+To see how your project is doing afterward, read [Engagement and analytics](/docs/sharing/engagement-and-analytics).

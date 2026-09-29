@@ -3,41 +3,61 @@ title: "Organizations and shared library"
 description: "Set up a team so your projects live in one shared place."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+A team, also called an organization, gives a group of people one shared library, one pool of storage, and one pool of AI tokens. Members see each other's team projects in **My Team** in the library.
 
-{/* SCREENSHOT NEEDED: Team settings with members and logo, beside the My Team library section
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+{/* SCREENSHOT NEEDED: The Team tab in your settings, showing the team logo, name, description, Team Usage, and Team members
+    Save to images/teams/ then replace this comment with:
+    <Frame><img src="/images/teams/team-settings.png" alt="The Team tab in user settings with the team logo, Team name and Description fields, the Team Usage panel, and the Team members list" /></Frame> */}
 
 ## Creating a team
 
-Where to create an organization and what it gives you.
+<Steps>
+  <Step title="Open your settings">
+    Open your account settings and select the **Team** tab.
+  </Step>
+  <Step title="Create the team">
+    If you are not in a team, the tab says **You're not part of any team**. Click **Create team**, enter a **Team name**, and click **Create team** again.
+  </Step>
+</Steps>
+
+You become the team's **Owner**. See [Members and roles](/docs/teams/members-and-roles) for what each role can do.
+
+<Note>
+  Teams are available on plans that include them. If yours does not, the **Team** tab shows a **Business** notice that reads **This is a higher tier feature**, with an **Upgrade now** button that opens the plan tab.
+</Note>
+
+A person can belong to one team at a time. If someone has invited you, the **Team** tab lists it under **Pending invites** with **Accept** and **Decline** buttons. If you have no invite yet, it says **No pending invites. Wait for a team admin to invite you.**
 
 ## Team details
 
-Name and logo, and where they appear.
+The top of the **Team** tab holds the team's details:
+
+- **Team name** is the name members see.
+- **Description** is a short note about the team.
+- **Logo** is the round picture at the left. Click it to open **Choose a team logo**, pick an image, and click **Save**. Owners and admins can click **Remove** under the logo to take it off.
+
+Your team name and logo appear in the **Save as:** choice when you publish a project, and beside the **My Team** section title in the library. Click **Save changes** to store edits to the name and description.
+
+## Team usage
+
+The **Team Usage** panel shows the team's plan and the shared limits at a glance:
+
+- The plan name, the number of seats in use, and the number of models.
+- **Shared Storage**, used against the total, with a bar that changes color as it fills.
+- **AI Tokens**, used against the monthly total, with the tokens **remaining**, any **extra bank**, and the date the allowance **Resets**.
+
+See [Seats and shared quota](/docs/teams/seats-and-quota).
 
 ## The shared library
 
-The My Team section collects everything owned by the organization.
+The **My Team** section of your [library](/docs/library/overview) collects every project that belongs to the team, whoever uploaded it. Use the **Shared** dropdown to filter by the member who created a model.
+
+Members see each other's projects in **My Team**, including private ones. Visibility still decides who outside the team can open a project. See [Visibility and ownership](/docs/library/visibility-and-ownership).
 
 ## Moving a project into the team
 
-The ownership toggle. Link back to visibility and ownership.
+Choose where a project lives with **Save as:** when you publish it, or later in **Scene info** when you edit it. Pick **Personal** to keep it in **My Scenes**, or pick your team's name to put it in **My Team**. Storage comes from the team's plan while you are a member, so the choice controls who can see and manage the project. See [Personal and team ownership](/docs/library/visibility-and-ownership#personal-and-team-ownership).
 
-## Sharing with a team
+## Sharing with individual people
 
-Sharing a specific project with one or more teams, or inviting someone by email.
-
----
-
-{/*
-Sources of truth for this page:
-  - ../Studio/components/SettingsTabs/GroupTab.tsx
-  - ../Studio/hooks/useOrgLibrary.ts
-  - ../Studio/components/Editor/CollaborateDialog.tsx
-*/}
+The publish dialog shows a **Collaborate** button for sharing a project with teams or with a person by email. It appears in the dialog but is not yet available. To give people access today, add them to the team. See [Members and roles](/docs/teams/members-and-roles).

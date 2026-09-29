@@ -3,42 +3,67 @@ title: "Room and scene settings"
 description: "Set the opening view and adjust how each room looks."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+Two panels in the right sidebar control how a walkthrough behaves. **Scene Settings** applies to every 360° scene in the walkthrough. **Room** applies to the room you have selected.
 
-{/* SCREENSHOT NEEDED: Room settings panel with the colour drawer open
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+{/* SCREENSHOT NEEDED: The Room panel with the Color drawer open and the color override switched on
+    Save to images/walkthrough/ then replace this comment with:
+    <Frame><img src="/images/walkthrough/room-settings.png" alt="The Room panel showing the room name, default look-at fields, the FOV slider, and the Color drawer with the override switch" /></Frame> */}
 
 ## Naming rooms
 
-Room names and where visitors see them.
+Select a room, open the **Room** panel, and edit the **Name** field. The name appears in the room list and in navigation, including in the destination list when you connect rooms. New rooms take the name of their image file, so rename them to something visitors will understand, such as "Kitchen". See [Building a tour](/docs/walkthrough/building-a-tour).
 
 ## The opening view
 
-Setting the direction a room opens at, either by capturing the current view or by entering
-angles and field of view.
+**Default look at** sets the direction a room faces when a visitor enters it.
+
+<Steps>
+  <Step title="Open the room">
+    Select the room in the **Scenes** list and wait for it to finish loading in the viewer. If another room is still showing, the panel reads **Navigate to this room first** in place of the capture button.
+  </Step>
+  <Step title="Frame the view">
+    Drag the room in the viewer until it faces the direction you want, and zoom to the level you want.
+  </Step>
+  <Step title="Capture it">
+    Click **Capture current view**. Studio fills in the fields below.
+  </Step>
+</Steps>
+
+You can also type the values yourself:
+
+| Field | What it sets |
+| --- | --- |
+| **Alpha (°)** | The horizontal direction the camera faces, left and right. |
+| **Beta (°)** | The vertical direction the camera faces, up and down. |
+| **FOV** | The default zoom level. It stays within the zoom range of the scene. |
 
 ## Camera behavior
 
-Rotation speed, inverting rotation, and zoom, set for the whole scene.
+Open **Scene Settings** to set how visitors move around. These settings apply to every 360° scene in the walkthrough.
 
-## Colour adjustments
+| Setting | What it does |
+| --- | --- |
+| **Rotation speed (desktop)** | How fast the view turns when dragging with a mouse. |
+| **Rotation speed (mobile)** | How fast the view turns when dragging with a finger. |
+| **Invert X** | Reverses the left and right drag direction. |
+| **Invert Y** | Reverses the up and down drag direction. |
+| **Zoom speed** | How fast scrolling or pinching changes the zoom. |
+| **Zoom range** | The minimum, default, and maximum zoom allowed. |
 
-Brightness, contrast, saturation, tint, and tint strength, with a reset.
+## Color adjustments
+
+The **Color** drawer at the bottom of **Scene Settings** adjusts the look of every room's photo at once.
+
+| Control | What it does |
+| --- | --- |
+| **Brightness** | Above 1 brightens the photo, below 1 darkens it. |
+| **Contrast** | 1 is neutral. Higher adds contrast and lower flattens it. |
+| **Saturation** | 0 is greyscale, 1 is the original, and above 1 is more vivid. |
+| **Tint Color** | The color blended into the photo. |
+| **Tint Strength** | How much tint to blend in. 0 is none and 1 is fully tinted. |
+
+Click **Reset to defaults** to return every color control to neutral.
 
 ## Per-room overrides
 
-A single room can override the scene's colour settings, which helps when one photo is darker
-than the rest.
-
----
-
-{/*
-Sources of truth for this page:
-  - ../Studio/components/virtual-walkthrough/WalkthroughSettingsPanel.tsx
-  - ../Studio/components/virtual-walkthrough/RoomSettingsPanel.tsx
-*/}
+One photo can be darker or cooler than the rest. Open the **Color** drawer in the **Room** panel and turn on **Override scene color**. The room now uses its own brightness, contrast, saturation, and tint instead of the scene's, starting from the scene's current values so nothing jumps. Turn the switch off to return the room to the scene's **Color** settings.

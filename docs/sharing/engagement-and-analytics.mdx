@@ -3,43 +3,67 @@ title: "Engagement and analytics"
 description: "See how a project is performing and what visitors have said."
 ---
 
-<Note>
-  Outline only. Verify every statement against the source files listed at the bottom of
-  this page before publishing. Do not state a capability, limit, or price that those
-  files do not confirm.
-</Note>
+Studio records how visitors use your published models and walkthroughs. You can see view counts and timing for each project, read visitor comments, and see likes.
 
-{/* SCREENSHOT NEEDED: Statistics section for a published model
-    Save to images/<section>/ then replace this comment with:
-    <Frame><img src="/images/<section>/<name>.png" alt="..." /></Frame> */}
+{/* SCREENSHOT NEEDED: The Statistics section for a published model with the Views chart and the Week, Month, and Year toggle
+    Save to images/sharing/ then replace this comment with:
+    <Frame><img src="/images/sharing/statistics.png" alt="The Statistics section showing average view time, average load time, a Views bar chart with Week, Month, and Year options, and a model size ring" /></Frame> */}
 
 ## Viewing statistics
 
-Where to find stats for a model or a walkthrough.
+Statistics appear in two places:
+
+- **In the editor.** Click **Statistics** at the bottom of the right sidebar, or scroll down, to reach the **Statistics** section below the editor. Use the return button to jump back up.
+- **On the project's viewer page.** The **Statistics** section is at the bottom of the page.
+
+For an overview across everything you own, see the **Views** figure on the [library](/docs/library/overview#your-usage-at-a-glance) stats bar. Hover over it to see the split between models and walkthroughs.
+
+<Note>
+  Your own visits, and visits by members of your organization, are not counted, so the numbers reflect your audience.
+</Note>
 
 ## What is measured
 
-View counts, load performance, and engagement. Walkthroughs also report room counts. Confirm
-each metric's exact meaning before describing it.
+**Models** show these cards:
+
+| Card | What it shows |
+| --- | --- |
+| **Average view time** | How long the viewer stays open on average, in seconds. |
+| **Average load time** | How long the model takes to finish loading and rendering, in seconds. |
+| **Views** | The number of times the viewer was opened, as a total and as a bar chart. |
+| **Size** | The size of the published scene, shown against a mobile-friendly benchmark. |
+
+**Views** has a **Week**, **Month**, and **Year** switch. The week view shows the last seven days, the month view shows each day of the current month, and the year view shows each month of the current year. Hover over a bar to see its exact count.
+
+The **Size** card has an information icon. A green ring means the size is good for mobile, yellow means it may cause performance issues on mobile, and red means it is not recommended for mobile.
+
+**Walkthroughs** show **Average view time**, **Views** with the same **Week**, **Month**, and **Year** switch, and the number of **rooms** in the tour.
+
+<Tip>
+  A slow average load time or a large size can lose visitors on phones. If your numbers look high, publish lighter models or fewer high-resolution rooms.
+</Tip>
 
 ## Comments
 
-Visitors can comment on public projects. Posting, editing, and deleting.
+Every published project has a **Comments** section on its viewer page.
+
+- **Post.** Type in the **Add a comment** box and click **COMMENT**. You need to be signed in. Comments can be up to 2000 characters.
+- **Edit.** Use the pencil on your own comment, change the text, and click **Save**, or press Enter. Click **Cancel** to keep the original.
+- **Delete.** Use the trash icon on your own comment. The owner of the project can delete any comment on it.
+- **Read more.** Click **Load more** to see older comments. The section reads **No comments yet.** until the first one arrives.
+
+Who can read comments follows the project's visibility. Private projects show comments only to people who can open the project.
 
 ## Likes
 
-How likes work and where the count appears.
+A signed-in visitor can click the heart on a viewer page to like a project. Click it again to remove the like. The number beside it is the total. Likes also feed the **Popularity** sort in the [library](/docs/library/overview#sections-and-filters).
 
 ## Notifications
 
-The bell in the top bar reports activity, including finished AI jobs.
+The bell in the top bar collects messages about your account. It shows:
 
----
+- **Your AI staging job completed.** when an AI job finishes.
+- **Your AI staging job failed. Tokens refunded.** when an AI job fails.
+- **Your subscription expires in less than 3 days.**
 
-{/*
-Sources of truth for this page:
-  - ../Studio/components/Editor/StatisticsSection.tsx
-  - ../Studio/components/virtual-walkthrough/WalkthroughStatisticsSection.tsx
-  - ../Studio/hooks/useStatistics.ts
-  - ../Studio/hooks/useComments.ts
-*/}
+Click **Clear all** to empty the list. It reads **No notifications** when there is nothing to show.
