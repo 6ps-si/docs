@@ -14,8 +14,7 @@
         "group": "Get started",
         "pages": [
           "index",
-          "quickstart",
-          "docs/get-started/accounts"
+          "quickstart"
         ]
       },
       {
@@ -30,11 +29,11 @@
         "pages": [
           "docs/editor/overview",
           "docs/editor/uploading-models",
+          "docs/editor/ai-render",
           "docs/editor/model-settings",
           "docs/editor/camera-positions",
           "docs/editor/hotspots",
           "docs/editor/scene-and-environment",
-          "docs/editor/ai-render",
           "docs/editor/publishing"
         ]
       },
@@ -42,10 +41,10 @@
         "group": "Virtual Walkthrough",
         "pages": [
           "docs/walkthrough/overview",
+          "docs/walkthrough/ai-room-editing",
           "docs/walkthrough/capturing-photos",
           "docs/walkthrough/building-a-tour",
           "docs/walkthrough/room-settings",
-          "docs/walkthrough/ai-room-editing",
           "docs/walkthrough/publishing"
         ]
       },
@@ -68,12 +67,6 @@
           "docs/teams/organizations",
           "docs/teams/members-and-roles",
           "docs/teams/seats-and-quota"
-        ]
-      },
-      {
-        "group": "Reference",
-        "pages": [
-          "docs/reference/supported-formats"
         ]
       },
       {
