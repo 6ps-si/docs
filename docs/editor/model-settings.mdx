@@ -3,52 +3,29 @@ title: "Model settings"
 description: "Position, rotate, and scale a model, and adjust its appearance."
 ---
 
-Select a model in the **Objects** panel to open its settings in the **Model** panel on the right. Here you place the model in the scene and, for Gaussian splat models, adjust how it looks.
+Select a model in the **Objects** panel to open its settings in the **Model** panel on the right. Here you place the model in the scene and, for Gaussian splat models, adjust how it looks. To add or delete models, use the **+** button and the menu in **Objects**.
 
 {/* SCREENSHOT NEEDED: Model panel with the Materials drawer open
     Save to images/editor/ then replace this comment with:
     <Frame><img src="/images/editor/model-settings.png" alt="The Model panel showing gizmo buttons, mirror axes, scale, position, rotation, and the open Materials drawer" /></Frame> */}
 
-## Choose a model
-
-The **Objects** panel lists every model in your scene with its file type and name. Click one to select it. The **Model** panel stays greyed out until a model is selected.
-
-- Click the **+** button to add another model. See [Uploading models](/docs/editor/uploading-models).
-- Hover over a model and open the menu to **Delete** it.
-
-<Note>
-  When you reopen a project that is already published, the **+** button and **Delete** are unavailable. You can still change the settings of the models it contains.
-</Note>
-
 ## Move, rotate, and scale
 
-You can adjust a model in two ways: directly in the viewer with the gizmo, or by typing values.
+Under **Gizmo**, choose **Move**, **Rotate**, or **Scale** to show handles on the model, then drag them in the viewer. For exact values, use the **Scale**, **Position**, and **Rotation** fields. Rotation is in degrees.
 
-### The gizmo
-
-Under **Gizmo**, choose **Move**, **Rotate**, or **Scale** to show the matching handles on the selected model, then drag them in the viewer. Click the active button again to hide the handles.
-
-### Typed values
-
-Three rows of X, Y, and Z fields give you exact control:
-
-| Field | What it sets |
-| --- | --- |
-| **Scale** | The model's size along each axis. |
-| **Position** | Where the model sits in the scene. |
-| **Rotation** | The model's rotation around each axis, in degrees. |
-
-Type a number, use the arrows, or scroll the mouse wheel over a field to change it in steps. For **Scale**, the padlock icon keeps all three axes together so the model grows and shrinks evenly. Click the padlock to unlock the axes and scale them separately.
+The padlock next to **Scale** keeps all three axes together so the model scales evenly. Unlock it to scale the axes separately.
 
 When you add the first model to a scene, Studio suggests a scale so the model fills the viewer.
 
-## Mirroring
-
-**Mirror Axes** flips the model across the X, Y, or Z axis. Use it when a model arrives back to front or upside down. Click an axis to toggle it.
+**Mirror Axes** flips the model across the X, Y, or Z axis, which helps when a model arrives back to front or upside down.
 
 ## Materials
 
-The **Materials** drawer, in yellow at the bottom of the panel, adjusts how a model looks. Click it to open it.
+<Info>
+  The Materials controls apply to Gaussian splat models (`.ply`, `.sog`, `.splat`, and `.spz` files).
+</Info>
+
+The **Materials** drawer at the bottom of the panel adjusts how a splat looks.
 
 | Control | What it does |
 | --- | --- |
@@ -58,25 +35,9 @@ The **Materials** drawer, in yellow at the bottom of the panel, adjusts how a mo
 | **Tint Color** | The color blended into the model. |
 | **Tint Strength** | How much of the tint to blend in. 0 is none and 1 is fully tinted. |
 
-Click **Reset to defaults** at the bottom of the drawer to undo every change in it.
+**Dot Mode** replaces the soft edges of a splat with hard-edged circles for a pointillist look. **Dot Radius** sets the size of each dot.
 
-<Info>
-  The Materials controls apply to Gaussian splat models (`.ply`, `.sog`, `.splat`, and `.spz` files).
-</Info>
-
-### Dot Mode
-
-**Dot Mode** replaces the soft edges of a splat with hard-edged circles for a pointillist look. When it is on, **Dot Radius** sets the size of each dot.
-
-### Fog
-
-**Fog** fades a splat to a solid color as it approaches the far edge of the view. When **Fog** is on, three controls appear:
-
-- **Fog Color** is the color the model fades to.
-- **Fog Near** is the depth where the fade begins.
-- **Fog Far** is the depth where the model is fully faded.
-
-Both depth sliders sit close to the far edge of the view, so make small adjustments.
+**Fog** fades a splat to **Fog Color** with distance. The fade starts at **Fog Near** and is complete at **Fog Far**. Both sliders sit close to the far edge of the view, so make small adjustments.
 
 ## Combined Sort
 

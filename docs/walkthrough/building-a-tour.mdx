@@ -3,7 +3,7 @@ title: "Building a tour"
 description: "Add rooms, connect them, and set the order a visitor moves through."
 ---
 
-You build a tour in the **Scenes** list on the left of the editor. Add scenes and rooms, then connect them with buttons so visitors can move from one to the next.
+You build a tour in the **Scenes** list on the left of the editor, then connect the rooms with buttons.
 
 {/* SCREENSHOT NEEDED: The Scenes list with a scene expanded to show room cards, and a Room Transition button in Button Settings
     Save to images/walkthrough/ then replace this comment with:
@@ -11,69 +11,39 @@ You build a tour in the **Scenes** list on the left of the editor. Add scenes an
 
 ## Adding a scene
 
-Click **Add** in the **Scenes** list and choose one of three options:
-
-- **360° Image** creates a scene from a 360° photo.
-- **Flat Image** creates a scene from a regular photo.
-- **Scene** creates an empty scene. Add rooms to it afterwards.
-
-A new scene is named **Scene** followed by a number. If you add an image to the editor before creating any scene, Studio makes the scene for you. The scene name appears in the list and in the destination choices for buttons.
+Click **Add** in the **Scenes** list and choose **360° Image**, **Flat Image**, or an empty **Scene**. If you drop an image before creating any scene, Studio makes the scene for you.
 
 ## Adding rooms
 
-Click a scene to expand it and see its rooms. Each room shows a thumbnail, a **360°** or **FLAT** badge, and its name, which comes from the image file name. Click **Add room** at the bottom of the scene and choose **360° Image** or **Flat Image** to add another room.
+Open a scene and click **Add room** to add a **360° Image** or **Flat Image**. A scene can mix both. Adding a 360° room to a scene that holds only flat rooms turns it into a 360° scene.
 
-A scene can mix room types. When you add a 360° room to a scene that holds only flat rooms, the scene becomes a 360° scene and keeps its flat rooms. See [Capturing photos](/docs/walkthrough/capturing-photos) for the image requirements.
+A scene opens on its first room, and rooms are listed in the order you added them. New rooms take the image file name. Rename them in [Room and scene settings](/docs/walkthrough/room-settings#naming-rooms).
 
-<Note>
-  A scene opens on its first room, and rooms appear in the list in the order you added them. To change the direction a room faces when a visitor enters it, see [Room and scene settings](/docs/walkthrough/room-settings).
-</Note>
+## Replacing and deleting
 
-## Replacing a room image
-
-To swap a photo without rebuilding the tour, click the upload icon on the room card and pick a new image. The room keeps its name, its buttons, and its settings.
-
-## Deleting rooms and scenes
-
-Use the trash icon on a room card to remove that room, or the trash icon on a scene to remove the whole scene. A scene needs at least one room to stay a 360° or flat scene, so the last room of a scene cannot be deleted. Delete the scene instead.
-
-<Warning>
-  When you open a walkthrough that is already published, adding and deleting scenes is unavailable. You can still adjust rooms, buttons, and settings. Publish a new walkthrough to change the set of scenes.
-</Warning>
+- The upload icon on a room card swaps the photo. The room keeps its name, buttons, and settings.
+- The trash icon removes a room or a whole scene. The last room of a scene cannot be deleted, so delete the scene instead.
 
 ## Connecting rooms
 
-A **Room Transition** button takes the visitor to another room. It is how you build the path through a tour.
+A **Room Transition** button takes the visitor to another room.
 
 <Steps>
-  <Step title="Select a room">
-    Choose the room where the button should appear. Its image opens in the viewer.
-  </Step>
   <Step title="Add a button">
-    Click **+** in the **Buttons** panel. The new button opens in **Button Settings**.
+    Select the room where the button should appear and click **+** in the **Buttons** panel.
   </Step>
-  <Step title="Choose the Room Transition type">
-    Set **Button Type** to **Room Transition**.
-  </Step>
-  <Step title="Pick the destination">
-    Under **Go to room**, choose the destination room from the list. The list includes rooms in other scenes, so a button can move a visitor from one scene to another.
+  <Step title="Set the type and destination">
+    Set **Button Type** to **Room Transition** and choose a room under **Go to room**. Rooms in other scenes are listed too.
   </Step>
   <Step title="Position the button">
-    Drag the button to the doorway or the direction you want in the viewer, or set the **Horizontal** and **Vertical** sliders. Horizontal runs from -180 to 180 degrees around the room, and Vertical from -90 to 90.
+    Drag it to a doorway in the viewer, or set **Horizontal** (-180 to 180 degrees) and **Vertical** (-90 to 90).
   </Step>
 </Steps>
 
-### Choosing what the visitor sees on arrival
-
-When the destination is a 360° room, **Button Settings** shows a **Set look-at** button. Click it to open **Set look-at direction**, which displays the destination panorama. Click the point you want visitors to face when they arrive, adjust the **Field of view**, and click **Apply**. The button then reads **Edit look-at**.
-
 ## Other buttons
 
-A button can also show text or open a link. Use the **Icon with Text** type for a popup note, and the **Frame** type for linked content. These types work the same way as in the 3D Editor, so the icon, size, and rich-text options are described in [Hotspots and buttons](/docs/editor/hotspots).
+The **Icon with Text** and **Frame** types work as in the 3D Editor. See [Hotspots and buttons](/docs/editor/hotspots#button-types). The walkthrough editor adds **Background color** and **Text color**.
 
-The walkthrough editor adds two options:
+The **Global** section under the **Buttons** panel holds buttons that appear in every room. In 360° scenes it can hold 360° buttons and on-screen buttons. Flat scenes support on-screen buttons only.
 
-- **Background color** and **Text color** set the colors of a button.
-- The **Global** section under the **Buttons** panel holds buttons that appear in every room instead of a single room. Open it and use its add buttons to create one. In 360° scenes it can hold 360° buttons, which sit on the panorama at a horizontal and vertical angle, as well as on-screen buttons. Flat scenes support on-screen buttons only.
-
-Visitors can also see a list of the rooms in the tour and jump between them.
+Visitors can also jump between rooms from a room list.

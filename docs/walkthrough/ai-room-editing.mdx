@@ -3,9 +3,7 @@ title: "AI room editing"
 description: "Stage furniture, preview a renovation, or remove objects directly in a 360 room."
 ---
 
-**AI Editing** changes part of a room photo from inside the walkthrough editor. You paint over the area you want to change, describe the change, and Studio produces a new version of that area. You can furnish an empty room, preview a renovation, or remove an unwanted object such as a camera tripod. There is no separate photo-editing software to learn.
-
-It works on 360° rooms and on flat rooms.
+**AI Editing** changes part of a room photo from inside the walkthrough editor. You paint over an area, describe the change, and Studio regenerates only that area. Use it to furnish an empty room, preview a renovation, or remove an object such as a tripod. It works on 360° and flat rooms.
 
 {/* SCREENSHOT NEEDED: A 360 room with a painted mask over part of the floor and the AI Editing panel open on the right
     Save to images/walkthrough/ then replace this comment with:
@@ -13,61 +11,30 @@ It works on 360° rooms and on flat rooms.
 
 ## Before you start
 
-Select a room in the **Scenes** list. The **AI Editing** panel in the right sidebar, or the **AI** tab on a phone, is dimmed until a room with an image is selected.
+- Select a room with an image. The **AI Editing** panel in the right sidebar, or the **AI** tab on a phone, stays dimmed until you do.
+- Each edit uses AI tokens. The bar at the bottom of the panel shows the cost **per usage** and the tokens you have **left**.
 
-Each edit uses AI tokens. The panel shows **AI credits**, the cost of one edit as **per usage**, and how many tokens are **left**.
-
-## Choosing an area
+## Make an edit
 
 <Steps>
-  <Step title="Open AI Editing">
-    Open the panel and click **Select Area**.
+  <Step title="Select the area">
+    Click **Select Area** and paint over the part of the room you want to change. Adjust **Brush size** as needed, then click **Done**.
   </Step>
-  <Step title="Paint the area">
-    Paint over the part of the room you want to change with the mouse or your finger. A banner reads **Paint over the area you want to edit**. Use the **Brush size** slider to change the brush width. A smaller brush gives cleaner edges, and a larger brush covers more per stroke.
+  <Step title="Describe the change">
+    In the **Prompt** box, describe the change for the painted area only, then click **Generate**. For example: "a modern grey sofa and a wooden coffee table", "light oak flooring", or "remove the tripod".
   </Step>
-  <Step title="Adjust if needed">
-    Click **Undo** to remove your last stroke, or **Clear** to start over.
+  <Step title="Review">
+    The panel shows **Before** and **After** side by side. To try again, change the prompt and click **Retry**. The painted area stays selected.
   </Step>
-  <Step title="Confirm">
-    Click **Done**. The panel shows a preview of the selected area with your paint on it, and the message **Area selected ✓**. Click **Clear** next to that message to discard the selection.
+  <Step title="Apply">
+    Click **Apply**. Studio blends the result into the room photo at full resolution. **Revert last edit** undoes the last apply.
   </Step>
 </Steps>
 
-Studio works on the painted area rather than the whole panorama, so the rest of the room stays untouched.
-
-## Describing the change
-
-Write what you want in the **Prompt** box, then click **Generate**. The button stays disabled until you have written a prompt. Describe the change for the painted area only. For example:
-
-- Furnish an empty room: "a modern grey sofa and a wooden coffee table, minimalist style."
-- Preview a renovation: "light oak flooring and white walls."
-- Remove an object: "remove the tripod."
-
-The box's placeholder suggests a short style of request: **Describe your edit, e.g. "remove the chair"**.
-
-While the edit runs, the panel shows **Generating…**. Click **Cancel** to stop and go back to the selected area.
-
-## Reviewing the result
-
-When the edit finishes, the panel shows **Before** and **After** images of the painted area side by side. If the result is not what you wanted, change the **Prompt** and click **Retry**. The area you painted stays selected, so you do not need to paint it again. Click the **x** to discard the result.
-
-## Applying or reverting
-
-Click **Apply** when you are happy. Studio blends the new pixels into the room photo at its full resolution, and the room in the viewer updates. You can then click **Select Area** to make another edit.
-
-Click **Revert last edit** to go back to the image before your last apply.
-
 <Note>
-  Your edits stay in the editor until you save or publish the walkthrough. For a 360° room that was loaded from an existing walkthrough, **Revert last edit** does not change what you see within the session. Nothing has been saved, so reloading the editor without saving discards the edit.
+  Edits are saved when you save or publish the walkthrough. Reloading the editor before that discards them. For a 360° room loaded from an existing walkthrough, **Revert last edit** does not change what you see within the session.
 </Note>
 
-Publish the walkthrough to make the edited rooms live. See [Publishing a walkthrough](/docs/walkthrough/publishing).
-
-## What it costs
-
-The bar at the bottom of the panel reads **AI credits** with the cost per edit and the tokens you have left, and a progress bar shows how much of your allowance is used. Retrying an edit runs it again. Your balance also appears on the stats bar in your [library](/docs/library/overview#your-usage-at-a-glance).
-
-## On the free plan
-
-AI output is watermarked on the free plan. The watermark is applied when the image is shown, so it disappears from your results when you move to a plan without one.
+<Note>
+  AI output is watermarked on the free plan. The watermark is applied when the image is shown, so it disappears from your results when you move to a plan without one.
+</Note>

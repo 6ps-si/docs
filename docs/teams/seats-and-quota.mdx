@@ -11,46 +11,31 @@ A team shares one subscription. Its members draw from the same storage and the s
 
 ## What a seat is
 
-A seat is one place for a person in the team. Each seat also adds storage and AI tokens to the team's shared pool, so a team with more seats has more capacity as well as more room for members. The **Team Seats** section describes it this way: each seat adds storage and AI tokens to the shared pool and reserves a member slot.
+A seat is one place for a person in the team. Each seat also adds storage and AI tokens to the team's shared pool.
 
 ## Adding a member past your seat count
 
-When every seat is taken, you cannot add another person. The **Add member** dialog reports **Seat limit reached. The owner must purchase more seats.** The same check runs again when someone accepts an invite, so an invite can fail if the team filled up while it was waiting.
-
-To make room, the owner adds seats, as described under [Owner and admin](#owner-and-admin). You can also remove a member you no longer need. See [Members and roles](/docs/teams/members-and-roles).
+When every seat is taken, **Add member** reports **Seat limit reached. The owner must purchase more seats.** The check runs again when someone accepts, so an invite can fail if the team filled up in the meantime. To make room, the owner [adds seats](#changing-the-number-of-seats) or removes a member.
 
 ## Shared storage
 
-Storage is pooled across the team rather than held per person. Everything a member uploads to the team counts against the same total, and there is no per-person split. The pool is used on a first come, first served basis.
+Storage is one pool for the whole team, with no per-person split. It is used first come, first served.
 
-Storage for a team project always comes from the team's plan while you are a member, whether you save the project as **Personal** or under the team's name. See [Personal and team ownership](/docs/library/visibility-and-ownership#personal-and-team-ownership).
+Projects saved as **Personal** draw from the same pool. See [Personal and team ownership](/docs/library/visibility-and-ownership#personal-and-team-ownership).
 
 ## Shared AI tokens
 
-AI tokens come from the same shared pool. When one member runs an AI render or edit, it reduces what is left for everyone, so a busy month for one person can leave less for the rest.
-
-The team's tokens have three parts:
-
-- A **monthly** allowance that resets on a set date.
-- An **extra bank** of tokens that is used after the monthly allowance is gone.
-- The tokens **remaining** across both.
+AI tokens are also one shared pool. The team gets a **monthly** allowance that resets on a set date, plus an **extra bank** used once the monthly allowance is gone.
 
 ## Checking what is left
 
 There are two places to look:
 
-- **Team Usage**, in the **Team** tab of your settings, shows the plan, the seats in use, and the number of models. It also shows **Shared Storage** as used against total, and **AI Tokens** as used against the monthly total with what remains and the date it **Resets**. Every member can see it.
-- The **stats bar** at the top of your [library](/docs/library/overview#your-usage-at-a-glance) shows **Storage** and **AI tokens** for you and your team together.
+- **Team Usage**, in the **Team** tab of your settings, shows the plan, seats in use, number of models, **Shared Storage**, and **AI Tokens** with what is **remaining**, the **extra bank**, and the date it **Resets**. Every member can see it.
+- The **stats bar** at the top of your [library](/docs/library/overview#your-usage-at-a-glance) shows **Storage** and **AI tokens**.
 
-## Owner and admin
+## Changing the number of seats
 
-Only the owner can change the number of seats. Admins cannot. Changing seats updates the team's subscription, so it stays with the person who holds the subscription.
+Only the owner can change seats, because it changes the team's subscription. In the **Plan** tab of settings, find **Team Seats**, set the **Seats** number, and click **Update seats**.
 
-The owner opens the **Plan** tab in settings and finds the **Team Seats** section. It reads how many seats are in use, for example **2 / 5 seats used**. Set the **Seats** number with the minus and plus buttons or type it, then click **Update seats**. A confirmation reads **Seats updated**.
-
-Two limits apply:
-
-- You cannot go below the number of seats your plan already includes.
-- You cannot go below the number of people currently in the team. Remove members first if you want fewer seats.
-
-The **Team Seats** section appears for owners on plans that support seats. If your plan does not offer extra seats, the app tells you that extra seats are not available on the plan yet and to contact support.
+You cannot go below the seats your plan includes, or below the number of people in the team. If your plan does not offer extra seats, the app says so and asks you to contact support.

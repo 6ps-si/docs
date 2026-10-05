@@ -3,7 +3,7 @@ title: "Publishing a walkthrough"
 description: "What happens when you publish, and how to edit a published tour."
 ---
 
-Publishing prepares every room photo, uploads it, and gives the walkthrough a link you can share. This page explains what to set first, what the progress panel shows, and how to change a tour after it is live.
+Publishing prepares every room photo, uploads it, and gives the walkthrough a link you can share.
 
 {/* SCREENSHOT NEEDED: The Publishing Tour panel with several rooms at different stages and the Overall progress bar
     Save to images/walkthrough/ then replace this comment with:
@@ -11,15 +11,8 @@ Publishing prepares every room photo, uploads it, and gives the walkthrough a li
 
 ## Before you publish
 
-Set these in the **Scene info** panel in the right sidebar:
-
-- **Name.** Publishing is blocked until the walkthrough has a name. If it is empty, the dialog says **Give your tour a name before publishing.**
-- **Description.** Shown to visitors alongside the tour.
-- **Visibility.** Decides who can open the tour. See [Visibility and ownership](/docs/library/visibility-and-ownership).
-
-You also need at least one image in the tour. Without one, the dialog says **Add at least one image before publishing.**
-
-If you belong to a team, the confirmation dialog has a **Save as:** choice of **Personal** or your team's name. See [Visibility and ownership](/docs/library/visibility-and-ownership#personal-and-team-ownership).
+- Add at least one image.
+- In **Scene info**, enter a **Name**, which publishing requires, and optionally a **Description**. Visitors see both. Set **Visibility** to decide who can open the tour. See [Visibility and ownership](/docs/library/visibility-and-ownership).
 
 ## Publish
 
@@ -28,50 +21,32 @@ If you belong to a team, the confirmation dialog has a **Save as:** choice of **
     Click **Publish** at the top of **Scene info**. If you are signed out, a sign-in window opens first.
   </Step>
   <Step title="Confirm">
-    The **Publishing Tour** dialog explains that your tour is ready to process and publish, and that this processes all images and prepares them for upload. Click **Continue**.
+    If you belong to a team, choose **Personal** or your team's name under **Save as:**. See [Personal and team ownership](/docs/library/visibility-and-ownership#personal-and-team-ownership). Click **Continue**.
   </Step>
-  <Step title="Watch the progress">
-    The panel lists every room with its current stage, and an **Overall progress** bar sits below them. See the next section.
+  <Step title="Wait for every room">
+    The panel shows each room's stage: **Compressing**, **Processing 360°** for 360° photos, **Uploading**, and **Done**. The work happens in your browser, so keep the tab open until it finishes.
   </Step>
   <Step title="Share it">
-    When every room is done, click **Done** to open the share options.
+    Click **Done** to open the share options.
   </Step>
 </Steps>
 
-## What publishing does
-
-Each room photo is prepared in your browser first, then uploaded. The stage label next to each room tells you where it is:
-
-| Stage | What is happening |
-| --- | --- |
-| **Waiting** | The room is in the queue. |
-| **Compressing** | The image is being reduced to a size that loads well. |
-| **Processing 360°** | A 360° photo is being converted into the form the viewer uses. Flat rooms skip this stage. |
-| **Uploading** | The prepared files are being sent to Studio. |
-| **Done** | The room is finished. |
-| **Error** | The room could not be published. |
-
-Rooms are prepared two at a time, so a tour with many rooms takes longer than one with a few. The work happens in your browser, so keep the tab open until the panel shows **Done**. You cannot close the panel while it is running.
-
-## If something fails
-
-A room that fails is marked **Error** in the panel, and the message for that room appears next to it. Click **Retry** to go back to the confirmation step and start again. If a single photo keeps failing, replace that room's image and publish again. See [Building a tour](/docs/walkthrough/building-a-tour#replacing-a-room-image).
+A room that fails shows **Error** with its message. Click **Retry** to start again. If one photo keeps failing, [replace its image](/docs/walkthrough/building-a-tour#replacing-and-deleting) and publish again.
 
 ## Share options
 
 **Publish options** opens when the walkthrough is live:
 
-- **View the walkthrough** opens it in a new tab.
-- A **QR code** with a download button.
-- The **Share Link** with a copy button.
-- **Export iframe** copies an embed snippet for your website. It is available on the Pro plan.
+- **View the walkthrough**
+- A **QR code** and the **Share Link**
+- **Export iframe**, available on the Pro plan
 
-**Code Embed** appears in the dialog but is not yet available. See [Links and embedding](/docs/sharing/links-and-embedding) for more on sharing.
+See [Share links and embedding](/docs/sharing/links-and-embedding) for more on sharing.
 
 ## Editing a published tour
 
 Open the walkthrough from your [library](/docs/library/overview). The **Publish** button becomes **Save**, and it keeps the same link.
 
-When you save, Studio uploads the rooms you replaced, added to a scene, or removed, and shows the same progress panel under the title **Saving Changes**. Removed rooms show a **Deleting** stage. Visibility and ownership changes are saved at the same time.
+Saving uploads only the rooms you replaced, added, or removed, with the same progress panel.
 
-Adding or deleting whole scenes is not available on a published walkthrough. See [Building a tour](/docs/walkthrough/building-a-tour).
+Adding or deleting whole scenes is not available on a published walkthrough. You can still adjust rooms, buttons, and settings. To change the set of scenes, publish a new walkthrough.

@@ -3,8 +3,6 @@ title: "Uploading models"
 description: "Supported file formats, what happens to your file, and converting FBX first."
 ---
 
-You add a model to the 3D Editor by dropping a file into the viewer. This page lists the formats you can use and explains what to do with FBX files.
-
 {/* SCREENSHOT NEEDED: Empty 3D Editor drop zone showing the format badges
     Save to images/editor/ then replace this comment with:
     <Frame><img src="/images/editor/upload-drop-zone.png" alt="The 3D Editor drop zone with the text Drag and drop your 3D asset here and a row of file format badges" /></Frame> */}
@@ -17,56 +15,18 @@ You add a model to the 3D Editor by dropping a file into the viewer. This page l
 | 3D Gaussian Splatting | .sog, .splat, .spz, .ply |
 | Needs converting first | FBX |
 
-The Gaussian Splatting formats suit large captured scenes, such as a building interior, and small single-object scans for product pages. See [Supported formats](/docs/reference/supported-formats) for more detail.
+The Gaussian Splatting formats suit large captured scenes, such as a building interior, and small single-object scans for product pages.
 
 ## Adding a model
 
-<Steps>
-  <Step title="Open the editor">
-    Start a **3D Editor** project from your [library](/docs/library/overview).
-  </Step>
-  <Step title="Add your file">
-    Drag the file onto the drop zone that says **Drag and drop your 3D asset here**, or click it to browse. The zone changes to **Release to upload** while you hold a file over it.
-  </Step>
-  <Step title="Check the scene">
-    The model appears in the viewer and in the **Objects** panel. Select it there to adjust it. See [Model settings](/docs/editor/model-settings).
-  </Step>
-</Steps>
+Drag the file onto the drop zone that says **Drag and drop your 3D asset here**, or click it to browse. The model appears in the viewer and in the **Objects** panel. To add more models to the same scene, use the add button in the **Objects** panel.
 
-To add more models to the same scene, use the add button in the **Objects** panel.
+A glTF model often points to separate files, such as a `.bin` file and texture images. Select them together with the `.gltf` file. If a required file is missing, the editor lists the names it could not find. A GLB file holds everything in one file.
 
-### Files that come with textures
+Studio optimizes uploaded models so they run smoothly on phones and other lower-powered devices. Uploaded models count toward your plan's storage.
 
-A glTF model often points to separate files, such as a `.bin` data file and texture images. Select these together with the `.gltf` file, in one drop or one browse. If a required file is missing, the editor lists the names it could not find so you can add them.
+## Converting FBX
 
-A GLB file holds everything in one file, so it needs no companions.
+When you drop an FBX file, the editor asks **Convert FBX to GLB?** Click **Convert**. The conversion runs in your browser.
 
-### Unsupported files
-
-If none of the files you add is a supported model type, the editor shows **Unsupported file type. Please upload a 3D model file.**
-
-## When your file is uploaded
-
-Uploaded models count toward your plan's storage, which you can see on the [stats bar](/docs/library/overview#your-usage-at-a-glance) in your library.
-
-## Automatic optimization
-
-Studio optimizes uploaded models so they load and run smoothly on lower-powered devices, including phones. You do not need to prepare your file for this.
-
-## The standalone FBX converter
-
-The converter is also available as a free tool at [studio.6ps.si/tools/fbx-converter](https://studio.6ps.si/tools/fbx-converter/). You do not need an account, and nothing leaves your browser.
-
-<Steps>
-  <Step title="Add your FBX file">
-    Drag a `.fbx` file onto the page, or click to browse.
-  </Step>
-  <Step title="Wait for the conversion">
-    A preview of the converted model appears when it finishes.
-  </Step>
-  <Step title="Download">
-    The page shows the **Original size** and the **Converted size (GLB)**. Click **Download GLB** to save the file, or **Convert another file** to start again.
-  </Step>
-</Steps>
-
-Use it whenever you want a web-ready GLB, whether or not you plan to use the editor.
+The converter is also a free standalone tool at [studio.6ps.si/tools/fbx-converter](https://studio.6ps.si/tools/fbx-converter/). It needs no account. Drop a `.fbx` file, then click **Download GLB**.

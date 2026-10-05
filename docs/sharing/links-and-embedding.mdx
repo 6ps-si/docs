@@ -3,7 +3,7 @@ title: "Share links and embedding"
 description: "Send a link, show a QR code, or put a project inside your own site."
 ---
 
-Every published model and walkthrough has a link. You can send that link, print a QR code that opens it, or embed the project inside a page on your own website.
+Every published model and walkthrough has a link, a QR code, and an embed code.
 
 {/* SCREENSHOT NEEDED: Export options dialog with the QR code, Share Link, and Embed as iFrame visible
     Save to images/sharing/ then replace this comment with:
@@ -11,67 +11,22 @@ Every published model and walkthrough has a link. You can send that link, print 
 
 ## Sharing a link
 
-When publishing finishes, the share dialog shows the **Share Link** with a copy button. You can also copy it later from the project's page in Studio.
+When publishing finishes, the share dialog shows the **Share Link** and a downloadable QR code. Later, use **SHARE** on the project's viewer page.
 
-A visitor who opens the link lands on the project's viewer page. It shows:
+The viewer page shows the live viewer, the project name, creator, and description, likes, comments, and statistics. On a phone, visitors tap the viewer to start interacting. Who can open the link depends on the project's [visibility](/docs/library/visibility-and-ownership).
 
-- The project name, its creator, and its visibility.
-- The live viewer. On a phone, tap the viewer to start interacting with it.
-- A **Like** button with a like count.
-- A **SHARE** button that copies the page's address.
-- The description you wrote.
-- A **Comments** section.
-- View and performance statistics.
-
-Visitors need to be signed in to like or comment. Whether a visitor can open the link at all depends on the project's visibility. See [Visibility and ownership](/docs/library/visibility-and-ownership).
-
-<Note>
-  If you own the project, you also see **USE IN WEBSITE** and **EDIT** on the viewer page. **EDIT** opens the project in its editor.
-</Note>
-
-## QR codes
-
-The share dialog shows a QR code for the link. Click the download button on the code to save it as an image. It is useful on printed material and on site, where a visitor can scan it with their phone.
+As the owner, you also see **USE IN WEBSITE** and **EDIT** on the viewer page.
 
 ## Embedding in a site
 
-An embed shows the viewer inside a page on your own website.
-
-<Steps>
-  <Step title="Get the embed code">
-    In the share dialog, click **Embed as iFrame** to copy an embed snippet. On the project's viewer page, click **USE IN WEBSITE** to open a dialog with the **View link**, the **Embed as iFrame** code, and a **Copy** button beside each.
-  </Step>
-  <Step title="Paste it into your page">
-    Paste the snippet into the HTML of the page where the project should appear. The snippet sets the width to 100% and the height to 600 pixels. You can change those values.
-  </Step>
-  <Step title="Publish your page">
-    Save and publish your page, then open it to check that the project loads.
-  </Step>
-</Steps>
-
-The snippet is an iframe that points to the project's viewer, in this form:
+Copy the embed code with **Embed as iFrame** in the share dialog, or with **USE IN WEBSITE** on the viewer page, and paste it into your site's HTML. It looks like this:
 
 ```html
 <iframe src="https://studio.6ps.si/view/?id=YOUR_PROJECT_ID" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
 ```
 
-Copy the snippet from Studio rather than typing it, because it already carries your project's ID.
-
-## Embedding in WordPress
-
-The **USE IN WEBSITE** dialog includes a short guide for WordPress:
-
-1. Open the WordPress page or post editor.
-2. Add a **Custom HTML** block.
-3. Paste the iframe code into the block.
-4. Save or publish the page.
-
-If you use the iframe plugin, the dialog also offers a shortcode to copy and paste instead.
+Change `width` and `height` to fit your page. In WordPress, paste the code into a **Custom HTML** block. If you use the iframe plugin, **USE IN WEBSITE** also offers a shortcode.
 
 ## Restricting where it can be embedded
 
-To make sure a project loads only on your own website, use domain locking. Set the project's visibility to **Unlisted**, then list the sites that may embed it under **Allowed domains**. See [Domain locking](/docs/library/visibility-and-ownership#domain-locking) for the steps and its limits.
-
-## Downloading a package
-
-The share dialog also lists **Code Embed**, described as downloading the file to host and share it yourself. It is a Pro plan option. The option appears in the dialog but is not yet active.
+To make a project load only on your own website, use [domain locking](/docs/library/visibility-and-ownership#domain-locking).

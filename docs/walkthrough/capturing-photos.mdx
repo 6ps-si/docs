@@ -3,58 +3,26 @@ title: "Capturing photos"
 description: "What to shoot, at what resolution, and how to get it into the editor."
 ---
 
-A walkthrough is built from photos of your rooms. This page explains what kind of photo to take, how the editor treats it, and how to add it.
-
 {/* SCREENSHOT NEEDED: The walkthrough editor drop zone, and the What type of image is this? dialog
     Save to images/walkthrough/ then replace this comment with:
     <Frame><img src="/images/walkthrough/add-photo.png" alt="The Virtual Walkthrough drop zone and the dialog asking whether the image is a 360° Image or a Flat Image" /></Frame> */}
 
-## 360° cameras
-
-Studio supports 360° cameras such as Insta360, so you can bring photos from the camera into the editor and build a tour without other software. A phone works too, since the whole flow runs in the browser.
-
 ## Image requirements
 
-The editor accepts JPG, PNG, and WebP files.
+The editor accepts JPG, PNG, and WebP files. Photos from 360° cameras such as Insta360 work without other software.
 
-For a **360° Image**, use an equirectangular photo. This is the flat, wide format that 360° cameras export, where the full sphere is unrolled into a rectangle twice as wide as it is tall.
+For a **360° Image**, use an equirectangular photo, the 2:1 format that 360° cameras export.
 
-When you publish, Studio prepares each 360° photo in your browser:
+Shoot at full resolution. When you publish, Studio scales photos down to 4096 pixels on the longest side and prepares lightweight versions so rooms open quickly.
 
-- It scales the photo down to a maximum of 4096 pixels on its longest side and about 10 MB before processing.
-- It cuts the photo into six cube faces, each 2048 pixels, that the viewer loads.
-- It makes smaller, lightweight versions so visitors see the room quickly while the full-quality version loads.
-
-You do not need to resize your photos yourself. A photo larger than 4096 pixels is scaled down, so shoot at the resolution your camera gives you and let Studio handle the rest.
+A **Flat Image** is a regular photo, such as an aerial shot, a floor plan, or a detail. It can hold buttons that link into 360° rooms.
 
 ## Adding a photo
 
-<Steps>
-  <Step title="Add the file">
-    Drag an image onto the drop zone that says **Drag & drop a 360° or flat image**, or click it to browse. Once you have a scene, use **Add** in the **Scenes** list, or **Add room** inside a scene.
-  </Step>
-  <Step title="Say what type it is">
-    When you drop or browse for a file in the drop zone, a dialog asks **What type of image is this?** Choose **360° Image** or **Flat Image**. The **Add** and **Add room** menus already let you choose the type.
-  </Step>
-  <Step title="Check the room">
-    The photo appears in the viewer and as a room card marked **360°** or **FLAT**.
-  </Step>
-</Steps>
+Drag an image onto the drop zone that says **Drag & drop a 360° or flat image**, or click it to browse. When the editor asks **What type of image is this?**, choose **360° Image** or **Flat Image**.
 
-If no scene is selected, Studio creates one for you, named **Scene** followed by a number, and adds the photo as its first room.
+To add more rooms, see [Building a tour](/docs/walkthrough/building-a-tour).
 
-To swap a photo later, use the upload icon on the room card. To remove one, use the trash icon.
-
-## Flat photos
-
-A **Flat Image** is a regular photo shown as an image, without the look-around 360° view. Use one when a 360° photo is not the right fit, such as for an aerial photo of a property, a floor plan, or a detail shot. A flat image can hold buttons, so it can link into 360° rooms. See [Building a tour](/docs/walkthrough/building-a-tour).
-
-## Shooting tips
-
-- Take one 360° photo for each room, from a spot that shows the room well.
-- Keep the lighting consistent from room to room so the tour feels continuous.
-- Keep the camera steady and at a natural height.
-
-## Removing the tripod
-
-If your camera or tripod shows up in a 360° photo, you can remove it. The AI room editing tool paints out unwanted objects inside the walkthrough editor, with no separate photo-editing software. See [AI room editing](/docs/walkthrough/ai-room-editing).
+<Tip>
+  If the tripod shows up in a 360° photo, remove it with [AI room editing](/docs/walkthrough/ai-room-editing).
+</Tip>

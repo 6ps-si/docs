@@ -4,32 +4,24 @@ description: "Furnish, renovate, edit, and upscale a room photo or a 360° panor
 icon: "sofa"
 ---
 
-AI Virtual Staging turns a photo of a room into a staged or edited version of it. Upload an image, describe what you want, and Studio returns a new image you can download. It works on regular photos and on 360° panoramas.
-
-Use it to add furniture to an empty room, preview a renovation, remove an object, or enlarge an image.
+AI Virtual Staging turns a room photo or a 360° panorama into a staged or edited version. Use it to add furniture, preview a renovation, remove an object, or upscale an image.
 
 ## Before you start
 
 - You need a JPG, PNG, or WebP image. Each file can be up to 30 MB.
-- You can open the page and load an image without signing in. Generating a result requires you to sign in.
-- Each generation uses AI tokens. The cost appears under the generate button, and your remaining balance appears at the top of the page.
+- Sign in to generate a result.
+- Each generation uses AI tokens. The cost appears under the generate button, and your balance at the top of the page.
+- Open it from **Choose Project Type** in your [library](/docs/library/overview#starting-a-new-project).
 
 {/* SCREENSHOT NEEDED: AI Virtual Staging page with an uploaded room photo, the description box filled in, and the Staged Result panel beside it
     Save to images/ai-staging/ then replace this comment with:
     <Frame><img src="/images/ai-staging/overview.png" alt="The AI Virtual Staging page with the original image on the left and the staged result on the right" /></Frame> */}
 
-## Open AI Virtual Staging
-
-From your [library](/docs/library/overview), click the dashed plus card in **My Scenes**. In the **Choose Project Type** dialog, pick **AI Virtual Staging** and click **Continue**.
-
 ## Edit an image
 
 <Steps>
   <Step title="Add your image">
-    Drag an image onto the **Original Image** panel, or click **Browse** and pick a file.
-  </Step>
-  <Step title="Choose the Edit mode">
-    Make sure **Edit** is selected in the mode toggle. It is the default.
+    Drop an image onto the **Original Image** panel, or click **Browse**. Leave the mode on **Edit**.
   </Step>
   <Step title="Describe what you want">
     Write your request in **Describe your staging requirements**. Name the furniture, where it goes, and the style. For example: "Add a modern grey sofa on the left side, wooden coffee table in center, minimalist style."
@@ -39,19 +31,15 @@ From your [library](/docs/library/overview), click the dashed plus card in **My 
   </Step>
 </Steps>
 
-A description is required in Edit mode. The button stays disabled until you enter one.
-
 ### Edit one area of a photo
 
-On a regular photo, click **Select area to edit** and draw a rectangle over the part of the image you want to change, then click **Done**. The button changes to **Mask drawn - click to redraw** so you can adjust the rectangle. Your description then applies to that area.
+On a regular photo, click **Select area to edit**, draw a rectangle over the part you want to change, and click **Done**. Your description then applies to that area only.
 
 ### Panoramas
 
-Studio checks the shape of your image. A 360° panorama, which has an aspect ratio of about 2:1, is recognized automatically and you see **Smart Detection: Recognized as a 360° Panorama.** Studio then corrects the seam where the panorama wraps around, so the edge of the image lines up in the viewer.
+A 2:1 image is recognized as a 360° panorama, and Studio corrects the seam where it wraps around. Click **Switch to standard** if it is a regular photo.
 
-For a panorama you also get a **Renovate** checkbox. Turn it on to have the surfaces of the room, such as floor, walls, and ceiling, renovated as well as furnished. Describe both the surfaces and the furnishing in your description.
-
-If Studio treats a regular image as a panorama, click **Switch to standard** to edit it as a normal photo.
+Panoramas get a **Renovate** checkbox. Turn it on to renovate the floor, walls, and ceiling as well as furnish the room, and describe both.
 
 ## Upscale an image
 
@@ -59,16 +47,9 @@ Select **Upscale** in the mode toggle, add your image, and click **Upscale Image
 
 ## Review and download your result
 
-The **Staged Result** panel offers these controls:
+The **Staged Result** panel lets you expand the image, open a panorama in a 360° viewer, download it, or start over.
 
-| Control | What it does |
-| --- | --- |
-| Expand | Shows the image at full size. |
-| 360° | Opens a panorama in an interactive viewer. Available for panoramas. |
-| Download | Saves the image to your device. You can also click **Export Image**. |
-| Refresh | Clears the current image and settings so you can start again. |
-
-On a phone, the page is split into three screens. Swipe up or tap **View result** to move from your upload to the result, and **View history** to reach earlier generations. **Redo** on the result screen takes you back to the first screen.
+On a phone, the page is split into screens. Tap **View result** to see the result and **View history** for earlier generations.
 
 <Note>
   AI output is watermarked on the free plan. The watermark is applied when the image is shown, so it disappears from your results when you move to a plan without one.
@@ -76,15 +57,13 @@ On a phone, the page is split into three screens. Swipe up or tap **View result*
 
 ## Previous generations
 
-Sign in to see your history. Click **Previous Generations** at the bottom of the page on desktop, or use **View history** on a phone, to open it. Each entry shows whether it was **Edited** or **Upscaled**, when it was created, and its status. Click **See** to load a finished image back into the upload area, or use the download icon to save it. **Refresh** reloads the list.
+**Previous Generations**, at the bottom of the page, lists your past results. Click **See** to load one back into the upload area.
 
 <Warning>
   Generated images are stored for 7 days. Download anything you want to keep.
 </Warning>
 
-## While you wait
-
-A generation takes a little while. You can leave the page. When it finishes, it appears in your history, and the bell in the top bar tells you. If a generation fails, the bell says so and the AI tokens are refunded. See [Engagement and analytics](/docs/sharing/engagement-and-analytics#notifications).
+You can leave the page while a generation runs. The bell in the top bar tells you when it finishes. If it fails, the AI tokens are refunded.
 
 ## Related pages
 

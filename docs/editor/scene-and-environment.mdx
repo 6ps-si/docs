@@ -3,61 +3,43 @@ title: "Scene and environment"
 description: "Set the background and lighting around your model."
 ---
 
-The **Scene Settings** panel controls what surrounds your model: the background color, an optional 360° or HDR environment image, the camera's field of view, and the logo overlay. The **Advanced** panel adds visual effects. Both apply to the whole scene, and to every model in it.
+The **Scene Settings** panel in the right sidebar controls what surrounds your model. The **Advanced** panel in the left sidebar adds visual effects. Both apply to every model in the scene.
 
 {/* SCREENSHOT NEEDED: Scene Settings panel with the color picker open, next to the Select HDRI dialog
     Save to images/editor/ then replace this comment with:
     <Frame><img src="/images/editor/scene-settings.png" alt="The Scene Settings panel with the background color picker and the Select HDRI dialog" /></Frame> */}
 
-## Background color
+## Background
 
-Open **Scene Settings** in the right sidebar. While no environment image is set, a color picker labeled **Background Color** appears. Choose a color, and the viewer background changes immediately. The color also carries a transparency value.
+With no environment image set, **Background Color** sets the viewer background, including its transparency.
 
-## Environment images
-
-Click the **HDRI** button, or read the hint **Add a 360° image or HDR environment** above it, to open the **Select HDRI** dialog. Drag a file into the dialog, or click it to browse, then click **Add background**.
-
-The dialog accepts `.jpg`, `.jpeg`, `.png`, `.hdr`, and `.exr` files. Studio detects the type from the file extension and shows it before you confirm:
+To use an image, click **HDRI**, add a file in the **Select HDRI** dialog, and click **Add background**. Studio detects the type from the file extension:
 
 | Type | Files | What it does |
 | --- | --- | --- |
-| **360° Image** | `.jpg`, `.jpeg`, `.png` | An equirectangular photo shown as a background dome around the scene. |
-| **HDR Environment** | `.hdr`, `.exr` | A prefiltered map that lights the scene. |
+| **360° Image** | `.jpg`, `.jpeg`, `.png` | A panorama shown as a dome around the scene. |
+| **HDR Environment** | `.hdr`, `.exr` | A map that lights the scene. |
 
-Once an environment image is set, the **Background Color** picker is replaced by the controls below. To remove the image, click the red trash button next to **HDRI**, and the color picker returns.
-
-## Adjusting the environment
-
-The controls depend on the type of image.
+An image replaces the color picker with these controls:
 
 | Control | Applies to | What it changes |
 | --- | --- | --- |
-| **Rotation** | Both | Turns the background. A 360° image has **X**, **Y**, and **Z** fields. An HDR environment has a **Y** field only. Values run from -360 to 360. |
+| **Rotation** | Both | Turns the background, from -360 to 360. A 360° image has X, Y, and Z. An HDR environment has Y only. |
 | **Scale** | 360° image | The size of the background sphere. |
 | **Intensity** | HDR environment | How strongly the environment lights the scene. |
 
-Rotate the environment to line up the part of the image you want behind the model, or to change where the light comes from.
+The red trash button next to **HDRI** removes the image.
 
 ## Field of view
 
-**Field of view** sets the camera's default view angle in degrees, from 10 to 170. It controls how zoomed in the view looks. It applies to the whole scene, including every camera position.
+**Field of view** sets the camera's view angle in degrees, from 10 to 170. It applies to every camera position.
 
 ## 6PS Logo
 
-The **6PS Logo** switch shows or hides the 6PS logo overlay in the viewer.
+The **6PS Logo** switch shows or hides the logo overlay in the viewer.
 
 ## Advanced display settings
 
-In the left sidebar, open **Advanced**, then **Post Processing**. Each switch turns on one visual effect:
+Open **Advanced**, then **Post Processing**, to switch on **Sharpen**, **FXAA Anti-aliasing**, **Bloom**, **Depth of Field**, **Chromatic Aberration**, **Vignette**, or **Color Grading**.
 
-| Effect | What it does |
-| --- | --- |
-| **Sharpen** | Sharpens the image slightly to counteract softness. |
-| **FXAA Anti-aliasing** | Smooths jagged edges. |
-| **Bloom** | Adds a soft glow around bright areas. Marked as expensive. |
-| **Depth of Field** | Blurs objects outside the camera's focus distance. Marked as very expensive. |
-| **Chromatic Aberration** | Adds a subtle color fringe at the edges of the frame. |
-| **Vignette** | Darkens the corners of the view. |
-| **Color Grading** | Applies a color-grading look to the whole scene. |
-
-Effects marked expensive or very expensive ask more of the viewer's device, so test them on a phone before you publish.
+Bloom is marked as expensive and Depth of Field as very expensive. They ask more of the viewer's device, so test them on a phone before you publish.

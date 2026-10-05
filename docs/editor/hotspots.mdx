@@ -11,65 +11,36 @@ Buttons add interactive points to your model. A visitor clicks one to read a not
 
 ## Two kinds of buttons
 
-The **Buttons** panel lists both kinds, each with its icon and name.
-
 | Kind | How it behaves | Position |
 | --- | --- | --- |
-| On-screen button | Stays in the same place on the screen while the camera moves. | An X and Y offset from the center of the view. |
-| 3D button | Sits on a point of the model and moves with it as the camera moves. | X, Y, and Z coordinates in the scene. |
+| On-screen button | Stays in the same place on the screen while the camera moves. | X and Y from -50 to 50, measured from the center of the view. |
+| 3D button | Sits on a point of the model and moves with it. | X, Y, and Z coordinates in the scene. |
 
-Use an on-screen button for something that should always be visible, such as a note about the whole scene or a link to your website. Use a 3D button to label a specific part of the model.
+Use an on-screen button for something that should always be visible, such as a link to your website. Use a 3D button to label a specific part of the model.
 
-## Adding an on-screen button
+## Adding a button
 
 <Steps>
   <Step title="Add the button">
-    Click the **+** button in the **Buttons** panel. A new button named **Canvas button** followed by a number appears in the list and in the viewer, and its settings open on the right.
+    Click **+** in the **Buttons** panel. A new on-screen button appears in the viewer and its settings open.
   </Step>
   <Step title="Place it">
-    Drag the button to where you want it in the viewer. You can also type its **X** and **Y** values under **Button Location**. Both values run from -50 to 50, measured from the center of the view.
+    Drag the button in the viewer, or type its values under **Button Location**.
   </Step>
   <Step title="Set what it does">
-    Choose a **Button Type** and fill in its content, as described below.
+    Choose a **Button Type** and fill in its content.
   </Step>
 </Steps>
 
-3D buttons appear in the same list when a scene already contains them. Select one to edit it. Its **Button Location** has **X**, **Y**, and **Z** fields for the position in the scene.
-
 ## Button types
-
-The **Button Type** setting decides what happens when a visitor clicks the button.
 
 | Type | What the visitor sees |
 | --- | --- |
-| **Icon with Text** | A popup with the content you write in **Button Description**. |
-| **Frame** | The page at your **Link** URL, opened in a frame on top of the scene. |
+| **Icon with Text** | A popup with the rich text you write in **Button Description**. |
+| **Frame** | The page at your **Link** URL, opened in a frame on top of the scene. Turn on **Fullscreen** to open it over the whole screen. |
 
-For a **Frame** button, turn on **Fullscreen** to open the linked content over the whole screen in place of a popup frame.
-
-## Writing the content
-
-For an **Icon with Text** button, write in the **Button Description** editor. Use the expand icon on the editor to work in a larger window. The toolbar offers:
-
-- Bold, italic, and underline
-- Heading 2 and Heading 3
-- Bullet and numbered lists
-- Left, center, and right alignment
-- Links
-- A horizontal rule
-- Text color, from a set of preset colors
-
-<Note>
-  The **Button Name** field is an internal label. It appears in the editor's button list and is not shown to visitors.
-</Note>
+**Button Name** is an internal label for the editor's list. Visitors do not see it.
 
 ## Appearance
 
-- **Button Icon** shows a grid of icons. Click one to use it. You can also click the icon next to a button in the list to change it.
-- **Size** sets how large an on-screen button appears. A 3D button has three size fields: **Min**, **Size**, and **Max**.
-
-## Editing and removing
-
-- Click a button in the list, or click it in the viewer, to select it and open **Button Settings**.
-- Click outside the panel to deselect it.
-- Hover over a button in the list, open its menu, and choose **Delete** to remove it.
+Pick an icon under **Button Icon**. **Size** sets how large an on-screen button appears. A 3D button has **Min**, **Size**, and **Max** fields.
