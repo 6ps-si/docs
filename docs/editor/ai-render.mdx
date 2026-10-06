@@ -5,9 +5,7 @@ description: "Turn the current 3D view into a rendered image."
 
 **AI Render** captures the view you are looking at in the 3D Editor and turns it into a rendered image based on your description. It cuts the wait for a visual from about an hour of conventional rendering to roughly ten seconds, so you can try ideas quickly and share them. Treat the result as a fast way to explore and communicate a design. It does not replace a final render.
 
-{/* SCREENSHOT NEEDED: AI Render panel with an aspect ratio chosen, a prompt filled in, and the token cost visible
-    Save to images/editor/ then replace this comment with:
-    <Frame><img src="/images/editor/ai-render.png" alt="The AI Render panel showing token balance, mode buttons, aspect ratio options, a prompt, and the Capture and Render button" /></Frame> */}
+<Frame><img src="/images/editor/ai-render.webp" alt="The 3D Editor with a building model framed for capture and the AI Render panel open on the right with a prompt filled in" /></Frame>
 
 ## Before you start
 
@@ -15,6 +13,10 @@ description: "Turn the current 3D view into a rendered image."
 - Each render and upscale uses AI tokens. The panel shows the cost **per usage** and the tokens you have **left**.
 
 ## Render an image
+
+<div className="side-image">
+  <Frame><img src="/images/editor/ai-render-panel.webp" alt="The AI Render panel showing token balance, mode buttons, aspect ratio options, a prompt, and the Capture and Render button" /></Frame>
+</div>
 
 Open **AI Render** in the right sidebar, or the **AI** tab on a phone.
 
@@ -35,13 +37,20 @@ Open **AI Render** in the right sidebar, or the **AI** tab on a phone.
 
 The result opens over the viewer, with **Download** and **New render**.
 
+<Frame><img src="/images/editor/ai-render-result.webp" alt="A rendered image displayed over the 3D viewer with Download and New render buttons" /></Frame>
+
 ## Reference images
+
+<div className="side-image">
+  <Frame><img src="/images/editor/ai-render-references.webp" alt="The Reference image section with an uploaded image and the Color references list with two labeled color swatches" /></Frame>
+</div>
 
 A reference image guides the AI with a second picture. Under **Reference image**, choose **Upload image** for a JPEG, PNG, or WebP file, or **Use last render** to refine your previous result step by step.
 
 ## Exact colors
 
 **Color references** pin down exact colors, which is more reliable than describing them in words. Click **+**, say what the color is for, such as "walls", and pick the color from the swatch. You can add up to four.
+
 
 ## Upscale a render
 

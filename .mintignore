@@ -10,3 +10,6 @@ Templates/
 # Draft content
 drafts/
 *.draft.mdx
+
+# Source screenshots (published copies are WebP under images/<section>/)
+images/Screenshots/

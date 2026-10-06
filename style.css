@@ -1,0 +1,27 @@
+/* Tall screenshots float to the right of the text they illustrate. */
+.side-image {
+  float: right;
+  width: 260px;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.side-image > * {
+  margin-top: 0;
+}
+
+.clear-float,
+.mdx-content::after,
+#content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 640px) {
+  .side-image {
+    float: none;
+    width: auto;
+    max-width: 280px;
+    margin: 1rem auto;
+  }
+}

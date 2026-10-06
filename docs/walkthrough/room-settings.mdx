@@ -5,9 +5,9 @@ description: "Set the opening view and adjust how each room looks."
 
 Two panels in the right sidebar control how a walkthrough behaves. **Scene Settings** applies to every 360° scene in the walkthrough. **Room** applies to the room you have selected.
 
-{/* SCREENSHOT NEEDED: The Room panel with the Color drawer open and the color override switched on
-    Save to images/walkthrough/ then replace this comment with:
-    <Frame><img src="/images/walkthrough/room-settings.png" alt="The Room panel showing the room name, default look-at fields, the FOV slider, and the Color drawer with the override switch" /></Frame> */}
+<div className="side-image">
+  <Frame><img src="/images/walkthrough/room-settings.webp" alt="The Room panel showing the room name, default look-at fields, the FOV slider, and the Color drawer with the override switch" /></Frame>
+</div>
 
 ## Naming rooms
 
@@ -19,6 +19,11 @@ The **Name** field in the **Room** panel sets the name visitors see in navigatio
 
 Select the room and let it load, turn and zoom the view in the viewer, then click **Capture current view**. If another room is still showing, the panel reads **Navigate to this room first**. You can also type the values:
 
+INSERT IMAGE [The Default look at section of the Room panel with the Capture current view button and the Alpha, Beta, and FOV fields]
+
+{/* Save to images/walkthrough/ then replace the INSERT IMAGE line above and this comment with:
+    <Frame><img src="/images/walkthrough/default-look-at.png" alt="The Default look at section with the Capture current view button and the Alpha, Beta, and FOV fields" /></Frame> */}
+
 | Field | What it sets |
 | --- | --- |
 | **Alpha (°)** | The horizontal direction the camera faces, left and right. |
@@ -27,7 +32,12 @@ Select the room and let it load, turn and zoom the view in the viewer, then clic
 
 ## Camera behavior
 
+<div className="side-image">
+  <Frame><img src="/images/walkthrough/scene-settings.webp" alt="The Scene Settings panel with rotation speed sliders, Invert X and Invert Y switches, Zoom speed, and the Zoom range slider" /></Frame>
+</div>
+
 **Scene Settings** sets how visitors move around in every 360° scene: **Rotation speed** for desktop and mobile, **Invert X** and **Invert Y**, **Zoom speed**, and **Zoom range** (minimum, default, and maximum).
+
 
 ## Color adjustments
 

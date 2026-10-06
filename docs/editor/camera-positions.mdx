@@ -5,9 +5,7 @@ description: "Save named views so visitors can move through a model in a set ord
 
 A camera position is a saved view of your model: where the camera looks, how far away it is, and how far a visitor can turn it. You build a list of positions in the **Positions** panel and fine-tune each one in **Position Settings**.
 
-{/* SCREENSHOT NEEDED: Positions panel beside Position Settings, showing the Rotation X, Rotation Y, and Zoom sliders
-    Save to images/editor/ then replace this comment with:
-    <Frame><img src="/images/editor/camera-positions.png" alt="The Positions panel listing three positions next to the Position Settings panel with rotation and zoom sliders" /></Frame> */}
+<Frame><img src="/images/editor/camera-positions.webp" alt="The Positions panel listing saved positions with a plus button to add one" style={{ maxWidth: "256px" }} /></Frame>
 
 ## Saving a view
 
@@ -16,6 +14,10 @@ Frame the model in the viewer, then click **+** in the **Positions** panel. Stud
 To change a saved view later, frame the model again, select the position, and click **Capture**. Capture replaces the angle, zoom, and target and keeps the limits.
 
 ## Position settings
+
+<div className="side-image">
+  <Frame><img src="/images/editor/position-settings.webp" alt="The Position Settings panel with name, description, animation duration, target, and the Rotation X, Rotation Y, and Zoom sliders" /></Frame>
+</div>
 
 | Setting | What it does |
 | --- | --- |
@@ -41,3 +43,8 @@ The lens angle is a scene-wide setting. See [Field of view](/docs/editor/scene-a
 ## Ordering
 
 The first position in the list is the primary position, the view your model opens with. Drag the grip handle to reorder, or choose **Primary Position** in a position's menu to move it to the top. The last remaining position cannot be deleted.
+
+INSERT IMAGE [A position's menu open in the Positions panel, with Primary Position visible and the grip handles beside each position]
+
+{/* Save to images/editor/ then replace the INSERT IMAGE line above and this comment with:
+    <Frame><img src="/images/editor/camera-positions-menu.png" alt="The Positions panel with grip handles beside each position and an open menu showing Primary Position" /></Frame> */}

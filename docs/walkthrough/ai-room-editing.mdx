@@ -5,9 +5,7 @@ description: "Stage furniture, preview a renovation, or remove objects directly 
 
 **AI Editing** changes part of a room photo from inside the walkthrough editor. You paint over an area, describe the change, and Studio regenerates only that area. Use it to furnish an empty room, preview a renovation, or remove an object such as a tripod. It works on 360° and flat rooms.
 
-{/* SCREENSHOT NEEDED: A 360 room with a painted mask over part of the floor and the AI Editing panel open on the right
-    Save to images/walkthrough/ then replace this comment with:
-    <Frame><img src="/images/walkthrough/ai-room-editing.png" alt="The walkthrough editor with a painted area over a room's floor and the AI Editing panel showing the brush size slider and Done, Undo, and Clear buttons" /></Frame> */}
+<Frame><img src="/images/walkthrough/ai-room-editing.webp" alt="The walkthrough editor with a painted area over a room's floor and the AI Editing panel showing the brush size slider and Done, Undo, and Clear buttons" /></Frame>
 
 ## Before you start
 
@@ -24,7 +22,13 @@ description: "Stage furniture, preview a renovation, or remove objects directly 
     In the **Prompt** box, describe the change for the painted area only, then click **Generate**. For example: "a modern grey sofa and a wooden coffee table", "light oak flooring", or "remove the tripod".
   </Step>
   <Step title="Review">
+    <div className="side-image">
+      <Frame><img src="/images/walkthrough/ai-room-editing-review.webp" alt="The AI Editing panel showing Before and After images side by side with Retry and Apply buttons" /></Frame>
+    </div>
+
     The panel shows **Before** and **After** side by side. To try again, change the prompt and click **Retry**. The painted area stays selected.
+
+    <div className="clear-float" />
   </Step>
   <Step title="Apply">
     Click **Apply**. Studio blends the result into the room photo at full resolution. **Revert last edit** undoes the last apply.

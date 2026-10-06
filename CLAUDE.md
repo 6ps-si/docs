@@ -4,14 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-The 6PS documentation site, built with Mintlify. `../CLAUDE.md` covers the wider 6PS working
-directory and carries copy rules that apply here too: no em dashes or en dashes anywhere,
-positive framing instead of contrastive "not X, but Y" phrasing, and never inventing product
-capabilities, limits, or pricing.
+The 6PS documentation site, built with Mintlify. Copy rules for every page: no em dashes or en
+dashes anywhere, positive framing instead of contrastive "not X, but Y" phrasing, and never
+inventing product capabilities, limits, or pricing.
+
+The folder is also an Obsidian vault. `.mintignore` keeps `.obsidian/`, `.trash/`, `Templates/`,
+`drafts/` and `*.draft.mdx` out of the build.
 
 ## Editing
 
-For any edit of .mdx files use skill `/mintlify`.
+For any edit of .mdx files use skill `/mintlify`. The entries in `.claude/skills/` are symlinks
+into `.agents/skills/` (tracked by `skills-lock.json`). If the skill does not load, read
+`.agents/skills/mintlify/SKILL.md` directly.
 
 ## Commands
 
@@ -30,9 +34,20 @@ navigation changes.
 
 ## Current state
 
-Every page under `docs/` is an outline, not finished copy: frontmatter, H2 headings, a note per
-section on what to cover, and a trailing comment listing the `Studio/` files that prove the
-behavior. Fill a page in by reading those files first.
+Every page under `docs/` has published copy. The per-page source lists and open verification
+TODOs were moved out of the pages into `../Blog-editorial-notes.md`, one section per page. Before
+changing a page, read its section there and the `Studio/` files it lists. Keep internal notes out
+of published `.mdx` files.
+
+Screenshots are WebP files under `images/<section>/`, converted from the PNG sources in
+`images/Screenshots/` (excluded from the build in `.mintignore`). A few are still missing: each
+is a visible `INSERT IMAGE [description]` line followed by a comment holding the finished
+`<Frame><img ... /></Frame>` snippet. `grep -rn "INSERT IMAGE"` lists them.
+
+Tall screenshots (panels, phone views) float beside the text: wrap the `<Frame>` in
+`<div className="side-image">` and place it right before the text it illustrates. The class
+lives in `style.css`. Small landscape captures get `style={{ maxWidth: "<half the pixel width>px" }}`
+so they display at their natural size.
 
 `docs.json` carries two intentionally empty groups, `Tutorials` and `Blog`, held as placeholders.
 Mintlify accepts them. Leave them empty until there is content.
@@ -55,8 +70,9 @@ These were settled deliberately. Raise them before reversing one.
 
 - End-user guides only. No REST API reference and no developer or integrator section.
 - Documentation is keyed to the tool, not to the audience. There is no architect or real estate split.
-- The standalone `/ai-staging` page is not documented, because it is not surfaced in the app's
-  navigation. AI features inside the 3D Editor and the Virtual Walkthrough are documented in place.
+- The standalone `/ai-staging` page (AI Virtual Staging, offered in the Choose Project Type dialog)
+  is documented at `docs/ai-staging/overview`. This reverses an earlier decision to leave it out.
+  AI features inside the 3D Editor and the Virtual Walkthrough are documented in place.
 - No billing section, no prices, and no link to pricing. Plan names may appear inline where a user
   meets a gate: AI output is watermarked on the free plan, the downloadable package and code embed
   are Pro-only, and some library sections are locked by plan.

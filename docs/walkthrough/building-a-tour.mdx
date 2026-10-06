@@ -5,13 +5,15 @@ description: "Add rooms, connect them, and set the order a visitor moves through
 
 You build a tour in the **Scenes** list on the left of the editor, then connect the rooms with buttons.
 
-{/* SCREENSHOT NEEDED: The Scenes list with a scene expanded to show room cards, and a Room Transition button in Button Settings
-    Save to images/walkthrough/ then replace this comment with:
-    <Frame><img src="/images/walkthrough/building-a-tour.png" alt="The Scenes list with room cards on the left and Button Settings with the Room Transition type and a Go to room selector on the right" /></Frame> */}
+<div className="side-image">
+  <Frame><img src="/images/walkthrough/building-a-tour.webp" alt="The Scenes list with room cards on the left and Button Settings with the Room Transition type and a Go to room selector on the right" /></Frame>
+</div>
 
 ## Adding a scene
 
 Click **Add** in the **Scenes** list and choose **360° Image**, **Flat Image**, or an empty **Scene**. If you drop an image before creating any scene, Studio makes the scene for you.
+
+<Frame><img src="/images/walkthrough/add-scene.webp" alt="The Scenes list with the Add menu open, offering 360° Image, Flat Image, and Scene" style={{ maxWidth: "253px" }} /></Frame>
 
 ## Adding rooms
 
@@ -23,6 +25,11 @@ A scene opens on its first room, and rooms are listed in the order you added the
 
 - The upload icon on a room card swaps the photo. The room keeps its name, buttons, and settings.
 - The trash icon removes a room or a whole scene. The last room of a scene cannot be deleted, so delete the scene instead.
+
+INSERT IMAGE [A room card with the upload and trash icons highlighted]
+
+{/* Save to images/walkthrough/ then replace the INSERT IMAGE line above and this comment with:
+    <Frame><img src="/images/walkthrough/room-card.png" alt="A room card in the Scenes list with its upload icon and trash icon" /></Frame> */}
 
 ## Connecting rooms
 
@@ -45,5 +52,7 @@ A **Room Transition** button takes the visitor to another room.
 The **Icon with Text** and **Frame** types work as in the 3D Editor. See [Hotspots and buttons](/docs/editor/hotspots#button-types). The walkthrough editor adds **Background color** and **Text color**.
 
 The **Global** section under the **Buttons** panel holds buttons that appear in every room. In 360° scenes it can hold 360° buttons and on-screen buttons. Flat scenes support on-screen buttons only.
+
+<Frame><img src="/images/walkthrough/global-buttons.webp" alt="The Buttons panel with the Global section listing buttons that appear in every room" style={{ maxWidth: "254px" }} /></Frame>
 
 Visitors can also jump between rooms from a room list.
