@@ -40,13 +40,15 @@ changing a page, read its section there and the `Studio/` files it lists. Keep i
 of published `.mdx` files.
 
 Screenshots are WebP files under `images/<section>/`, converted from the PNG sources in
-`images/Screenshots/` (excluded from the build in `.mintignore`). A few are still missing: each
-is a visible `INSERT IMAGE [description]` line followed by a comment holding the finished
-`<Frame><img ... /></Frame>` snippet. `grep -rn "INSERT IMAGE"` lists them.
+`images/Screenshots/` (excluded from the build in `.mintignore`). Shots still to capture are
+hidden `{/* SCREENSHOT NEEDED: ... */}` comments holding the finished `<Frame><img ... /></Frame>`
+snippet. `grep -rn "SCREENSHOT NEEDED"` lists them.
 
-Tall screenshots (panels, phone views) float beside the text: wrap the `<Frame>` in
-`<div className="side-image">` and place it right before the text it illustrates. The class
-lives in `style.css`. Small landscape captures get `style={{ maxWidth: "<half the pixel width>px" }}`
+Tall screenshots (panels, phone views) float to the right: wrap the `<Frame>` in
+`<div className="side-image">`. Place it right before the text it illustrates, or right before a
+heading to line the image up with that heading. Tables beside it shrink to fit (see `style.css`).
+Add `<div className="clear-float" />` before the next heading when the next section should start
+below the image. Small landscape captures get `style={{ maxWidth: "<half the pixel width>px" }}`
 so they display at their natural size.
 
 `docs.json` carries two intentionally empty groups, `Tutorials` and `Blog`, held as placeholders.

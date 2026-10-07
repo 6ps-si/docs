@@ -9,6 +9,17 @@
   margin-top: 0;
 }
 
+/* Let tables sit beside a floated screenshot instead of dropping below it.
+   Mintlify gives the table wrapper a fixed width, which cannot fit next to a float. */
+.mdx-content:has(.side-image) div:has(> [data-component-part="scroll-area-viewport"]) {
+  --page-padding: 0px;
+  width: auto;
+}
+
+.mdx-content:has(.side-image) td {
+  min-width: 6rem;
+}
+
 .clear-float,
 .mdx-content::after,
 #content::after {
